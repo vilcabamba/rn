@@ -1,0 +1,16 @@
+doctype html
+html
+head
+  title Qhatu
+  = stylesheet_link_tag "application",
+                        media: "all",
+                        "data-turbolinks-track" => true
+  = javascript_include_tag "application",
+                           "data-turbolinks-track" => true
+  = csrf_meta_tags
+body
+  .container
+    = render "layouts/current_session"
+    = render "layouts/main_navbar"
+    = render "layouts/flashes"
+    = yield

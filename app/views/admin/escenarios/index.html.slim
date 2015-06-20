@@ -1,0 +1,7 @@
+.pull-right
+  = link_to new_admin_escenario_path,
+            class: "btn btn-default btn-xs" do
+    i.glyphicon.glyphicon-plus
+
+- escenarios.each do |escenario|
+  = render escenario

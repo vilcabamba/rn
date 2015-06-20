@@ -1,0 +1,11 @@
+= form_for [:admin, escenario] do |f|
+  = render "admin/shared/form_errors", resource: f.object
+
+  .form-group
+    = f.label :uid
+    = f.text_field :uid,
+                   required: true,
+                   class: "form-control"
+
+  .form-group
+    = f.label :periodo

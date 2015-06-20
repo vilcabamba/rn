@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  detail: MyString
+  price: 
+  status: 1
+  escenario_id: 
+
+two:
+  uid: MyString
+  detail: MyString
+  price: 
+  status: 1
+  escenario_id: 
