@@ -1,0 +1,9 @@
+- content_for :title, t("views.butacas.index")
+
+.pull-right
+  = link_to new_admin_escenario_butaca_path,
+            class: "btn btn-default btn-xs" do
+    i.glyphicon.glyphicon-plus
+
+- butacas.each do |butaca|
+  = render butaca

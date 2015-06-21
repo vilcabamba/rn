@@ -7,7 +7,7 @@ class AdminController < ApplicationController
   def require_admin!
     redirect_to(
       root_path,
-      error: I18n.t("views.unauthorized")
+      error: t("views.unauthorized")
     ) if !current_user.admin?
   end
 

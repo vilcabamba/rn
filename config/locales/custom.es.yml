@@ -2,6 +2,7 @@
   views:
     submitting: "Enviando.."
     unauthorized: "No tienes permiso para realizar esta acción"
+    delete: Eliminar
     warning:
       change_rol: "Si cambias tu rol de administrador, perderás tus privilegios de edición de usuarios/permisos"
     main_navbar:
@@ -15,6 +16,21 @@
       confirmation_instructions: ¿No recibiste instrucciones para confirmar tu cuenta?
       unlock_instructions: ¿No recibiste instrucciones para desbloquear tu cuenta?
       password_length_help: "(%{minimum} caracteres mínimo)"
+    escenarios:
+      created: Escenario creado
+      new: Nuevo escenario
+      index: Escenarios
+      edit: Editar escenario
+      updated: Escenario actualizado
+      deleted: Escenario eliminado
+    butacas:
+      index: Butacas
+      new: Nueva butaca
+      edit: Editar butaca
+      created: Butaca creada
+      updated: Butaca actualizada
+      deleted: Butaca eliminada
+      cant_delete: No se puede eliminar esta butaca
 
   actions:
     new: "Nuevo"

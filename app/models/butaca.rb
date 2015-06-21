@@ -14,4 +14,12 @@ class Butaca < ActiveRecord::Base
                greater_than_or_equal: 0
              }
   end
+
+  def to_s
+    uid
+  end
+
+  def destroyable?
+    false
+  end
 end

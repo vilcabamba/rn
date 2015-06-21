@@ -14,7 +14,7 @@ module AdminHelper
     active = controller.send(:nav_item) =~ Regexp.new(controller_name, Regexp::IGNORECASE)
     content_tag :li, class: "#{'active' if active}" do
       link_to(
-        I18n.t("views.main_navbar.#{name}"),
+        t("views.main_navbar.#{name}"),
         path,
         *options
       )

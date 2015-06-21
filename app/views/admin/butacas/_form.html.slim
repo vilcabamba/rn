@@ -1,4 +1,4 @@
-= form_for [:admin, escenario] do |f|
+= form_for [:admin, escenario, butaca] do |f|
   = render "admin/shared/form_errors", resource: f.object
 
   .form-group
@@ -8,16 +8,21 @@
                    class: "form-control"
 
   .form-group
-    = f.label :periodo
-    = f.select :periodo,
-               periodos,
-               {},
-               class: "form-control"
+    = f.label :detail
+    = f.text_field :detail,
+                   class: "form-control"
+
+  .form-group
+    = f.label :price
+    = f.number_field :price,
+                     value: f.object.price.to_f,
+                     class: "form-control",
+                     step: "any"
 
   .actions
     - unless f.object.new_record?
       = link_to t("views.delete"),
-                admin_escenario_path(escenario),
+                admin_escenario_butaca_path,
                 method: :delete,
                 class: "btn btn-danger"
     = f.submit class: "btn btn-primary",
