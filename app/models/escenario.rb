@@ -2,7 +2,7 @@ class Escenario < ActiveRecord::Base
   enum periodo: [:semanal, :mensual]
 
   begin :relationships
-    has_many :butacas
+    has_many :butacas, dependent: :destroy
   end
 
   begin :validations

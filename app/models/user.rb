@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   begin :relationships
-    has_one :expositor
+    has_one :expositor, dependent: :destroy
   end
 
   begin :validations

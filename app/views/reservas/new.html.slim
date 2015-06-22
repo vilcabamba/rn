@@ -1,0 +1,14 @@
+.new-reserva-user-form
+  ul.nav.nav-tabs
+    li.active
+      a href="#new-user" data-toggle="tab"
+        = t("views.reservas.new_user")
+    li
+      a href="#existing-user" data-toggle="tab"
+        = t("views.reservas.existing_user")
+
+  .tab-content
+    .tab-pane#new-user.active
+      = render "new_user"
+
+    .tab-pane#existing-user fgh

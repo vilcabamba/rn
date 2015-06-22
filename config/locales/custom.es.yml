@@ -31,6 +31,9 @@
       updated: Butaca actualizada
       deleted: Butaca eliminada
       cant_delete: No se puede eliminar esta butaca
+    reservas:
+      new_user: Nuevo usuario
+      existing_user: Usuario existente
 
   actions:
     new: "Nuevo"

@@ -252,6 +252,8 @@
     registrations:
       user:
         signed_up: Registrado exitosamente
+    failure:
+      already_authenticated: Ya has iniciado sesión
     sessions:
       user:
         already_signed_out: Ya cerraste sesión
