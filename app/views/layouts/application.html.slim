@@ -9,17 +9,16 @@ head
                            "data-turbolinks-track" => true
   = csrf_meta_tags
 body
-  .container
-    = render "layouts/current_session"
-    = render "layouts/flashes"
-    = render "layouts/public_navbar"
+  = render "layouts/current_session"
+  = render "layouts/flashes"
+  = render "layouts/public_navbar"
 
-    h1.text-center = yield :title
+  = render "layouts/header_section"
 
-    - if breadcrumbs.any?
-      ol.breadcrumb
-        = render_breadcrumbs tag: :li, separator: ""
+  - if breadcrumbs.any?
+    ol.breadcrumb
+      = render_breadcrumbs tag: :li, separator: ""
 
-    = yield
+  = yield
 
-  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:600"
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:600|Montserrat:700"
