@@ -12,6 +12,7 @@ body
   .container
     = render "layouts/current_session"
     = render "layouts/flashes"
+    = render "layouts/public_navbar"
 
     h1.text-center = yield :title
 
@@ -20,3 +21,5 @@ body
         = render_breadcrumbs tag: :li, separator: ""
 
     = yield
+
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:400,900,800,600,700,500,300,200,100"
