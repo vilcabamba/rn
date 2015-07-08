@@ -1,24 +1,29 @@
+= render "layouts/facebook_sdk"
+
 #footer.body2
   .container
     .loop
       .fourcol.first
-       h2.widget BÚSCANOS EN FACEBOOK:
-       iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Flaferiadeloja&amp;width=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23dddddd&amp;stream=false&amp;header=false&amp;height=260" scrolling="no" frameborder="0" style="border-color:#dddddd; padding:-1px; overflow:hidden; width:290px; height: 260px;" allowtransparency="true"
+        h2.widget BÚSCANOS EN FACEBOOK:
+        div class="fb-page" data-href="http://facebook.com/laferiadeloja" data-width="290" data-height="260" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"
+          div class="fb-xfbml-parse-ignore"
+            blockquote cite="http://facebook.com/laferiadeloja"
+              a href="http://facebook.com/laferiadeloja" Feria de Loja
       .fourcol
-       h2.widget
-        .span NOTICIAS RECIENTES
+        h2.widget
+          .span NOTICIAS RECIENTES
       .fourcol
-       h2.widget REDES SOCIALES:
-       .social-warp
-        ul.social-menu
-         li.sprite-vimeo
-          a.mk-social-vimeo title="Vimeo" href="http://vimeo.com"
-         li.sprite-youtube
-          a.mk-social-youtube title="You Tube" href="http://youtube.com"
-         li.sprite-twitter
-          a.mk-social-twitter-alt title="Twitter" href="http://twitter.com"
-         li.sprite-facebook
-          a.mk-social-facebook title="Facebook" href="https://www.facebook.com/foresteaecu"
+        h2.widget REDES SOCIALES:
+        .social-warp
+          ul.social-menu
+            li.sprite-vimeo
+              a.mk-social-vimeo title="Vimeo" href="http://vimeo.com"
+            li.sprite-youtube
+              a.mk-social-youtube title="You Tube" href="http://youtube.com"
+            li.sprite-twitter
+              a.mk-social-twitter-alt title="Twitter" href="http://twitter.com"
+            li.sprite-facebook
+              a.mk-social-facebook title="Facebook" href="https://www.facebook.com/foresteaecu"
     .clearfix
 
 .container
