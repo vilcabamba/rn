@@ -41,16 +41,17 @@ ActiveRecord::Schema.define(version: 20150617035851) do
 
   create_table "expositors", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "tipo_personeria"
+    t.integer  "tipo_personeria", default: 0
     t.string   "country"
     t.string   "city"
-    t.string   "dni"
+    t.string   "dni",                         null: false
     t.string   "phone"
     t.string   "mobile"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
+  add_index "expositors", ["dni"], name: "index_expositors_on_dni", using: :btree
   add_index "expositors", ["user_id"], name: "index_expositors_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
