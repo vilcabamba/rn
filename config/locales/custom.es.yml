@@ -31,7 +31,7 @@
       updated: Butaca actualizada
       deleted: Butaca eliminada
       cant_delete: No se puede eliminar esta butaca
-      not_available: No hay stands disponibles
+      not_available: Lo sentimos, ya no hay stands disponibles
     reservas:
       new_user: Nuevo usuario
       existing_user: Usuario existente
