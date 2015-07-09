@@ -1,9 +1,20 @@
-$.get 'http://feriadeloja.com/feed/', (data) ->
-  $(data).find('channel').find('item').each ->
-    el = $(this)
-    title = el.find('title').text()
-    link = el.find('link').text()
-    description = el.find('description').text()
-    container = $('#feed')
-    element = "<li><a href=\"#{link}\">#{title}</a></li>"
-    container.append(element)
+feedUrl = "http://feriadeloja.com/feed"
+
+parseRSS = (url, callback) ->
+  $.ajax
+    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+    dataType: 'json',
+    success: (data) ->
+      callback(data.responseData.feed)
+
+jQuery ->
+  parseRSS feedUrl, (data) ->
+    $feed = $('#feed')
+    for entry in data.entries
+      $entryLink = $(
+        "<a />",
+        href: entry.link,
+        text: entry.title
+      )
+      $feed.append $("<li />", html: $entryLink)
+    null
