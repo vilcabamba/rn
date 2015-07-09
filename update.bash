@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-git fetch && git pull
+git fetch
+git pull --rebase origin master
 RAILS_ENV=production
 bundle exec rake assets:precompile
 bundle exec rake db:migrate
