@@ -38,6 +38,7 @@ gem "decent_exposure"
 gem "little_decorator"
 gem "money-rails"
 gem "breadcrumbs_on_rails"
+gem "execjs"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
