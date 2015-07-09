@@ -2195,7 +2195,7 @@ span.ribbon_icon
 .wpcf7-form p img{ float:left;}
 
 .wpcf7-form p input,
-.wpcf7-form p textarea{ width:89%; font-size:12px !important; font-style:normal; padding:5px 5% margin:5px 0; overflow:hidden; clear:both; border:none !important; background:url(images/transparent-dark.png) !important;}
+.wpcf7-form p textarea{ width:89%; font-size:12px !important; font-style:normal; padding:5px 5%; margin:5px 0; overflow:hidden; clear:both; border:none !important; background:url(images/transparent-dark.png) !important;}
 
 .wpcf7-form p textarea{ height:120px;line-height: 1.5 !important;}
 
