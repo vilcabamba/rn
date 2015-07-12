@@ -1,5 +1,3 @@
-- content_for :title, t("views.users.log_in")
-
 = form_for resource,
            as: resource_name,
            url: session_path(resource_name) do |f|
@@ -18,16 +16,14 @@
                        autocomplete: "off"
 
   - if devise_mapping.rememberable?
-    .form-group
-      = f.check_box :remember_me, class: "checkbox"
-      = f.label :remember_me
+    .checkbox
+      = f.label :remember_me do
+        = f.check_box :remember_me, class: "checkbox"
+        = t "activerecord.attributes.user.remember_me"
 
   .actions
+    = link_to t("views.users.forgot_password"),
+              new_password_path(resource_name)
+
     = f.submit t("views.users.log_in"),
                class: "btn btn-primary"
-
-= render "devise/shared/links",
-         resource: resource,
-         resource_name: resource_name,
-         devise_mapping: devise_mapping,
-         hide_login: true

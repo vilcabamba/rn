@@ -1,2 +1,9 @@
+- content_for :title, t("views.users.log_in")
+
 .main-centered
   = render "devise/sessions/new"
+
+  = render "devise/shared/links",
+           resource: resource,
+           resource_name: resource_name,
+           devise_mapping: devise_mapping
