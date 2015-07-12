@@ -1,4 +1,6 @@
-.new-reserva-user-form
+- content_for :title, t("views.reservas.new")
+
+.main-centered.new-reserva-user-form
   ul.nav.nav-tabs
     li.active
       a href="#new-user" data-toggle="tab"
@@ -11,4 +13,4 @@
     .tab-pane#new-user.active
       = render "new_user"
 
-    .tab-pane#existing-user fgh
+    .tab-pane#existing-user existing user

@@ -33,8 +33,9 @@
       cant_delete: No se puede eliminar esta butaca
       not_available: Lo sentimos, ya no hay stands disponibles
     reservas:
-      new_user: Nuevo usuario
+      new_user: Usuario nuevo
       existing_user: Usuario existente
+      new: Nueva reserva
 
   actions:
     new: "Nuevo"

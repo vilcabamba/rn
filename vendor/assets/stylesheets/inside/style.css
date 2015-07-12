@@ -797,7 +797,9 @@ display: none;
 ********************************************************************************************
 ********************************************************************************************/
 
-input, textarea,input checkbox,input radio,select, file{
+/* we'd rather keep bootstrap's style for forms */
+
+/*input, textarea,input checkbox,input radio,select, file{
 	border: 1px solid #eee;
 	padding:10px;
 	margin:0 10px 0 0;
@@ -828,7 +830,7 @@ form#contactform fieldset input#submit{
 	}
 
 input[type="checkbox"],
-input[type="radio"] { margin:6px 8px 0 0 !important;}
+input[type="radio"] { margin:6px 8px 0 0 !important;}*/
 
 /* @search
 ********************************************************************************************
