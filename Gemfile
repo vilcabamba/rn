@@ -38,8 +38,7 @@ gem "decent_exposure"
 gem "little_decorator"
 gem "money-rails"
 gem "breadcrumbs_on_rails"
-
-gem 'dotenv-rails', '~> 2.0.2'
+gem "dotenv-rails", "~> 2.0.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,4 +49,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem "annotate"
 end

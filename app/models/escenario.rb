@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: escenarios
+#
+#  id         :integer          not null, primary key
+#  uid        :string           not null
+#  periodo    :integer          default("0")
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Escenario < ActiveRecord::Base
   enum periodo: [:semanal, :mensual]
 
