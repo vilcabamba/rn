@@ -1,15 +1,18 @@
-feedUrl = "http://feriadeloja.com/feed"
+class RemoteFeed
+  googleApiURL: "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q="
 
-parseRSS = (url, callback) ->
-  $.ajax
-    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-    dataType: 'json',
-    success: (data) ->
-      callback(data.responseData.feed)
+  constructor: (@feedUrl) ->
+    @fetch()
 
-jQuery ->
-  parseRSS feedUrl, (data) ->
-    $feed = $('#feed')
+  fetch: =>
+    $.ajax
+      url: document.location.protocol + @googleApiURL + encodeURIComponent(@feedUrl),
+      dataType: "json",
+      success: (data) =>
+        @loaded(data.responseData.feed)
+
+  loaded: (data) ->
+    $feed = $('#feed').html("")
     for entry in data.entries
       $entryLink = $(
         "<a />",
@@ -18,3 +21,8 @@ jQuery ->
       )
       $feed.append $("<li />", html: $entryLink)
     null
+
+feedUrl = "http://feriadeloja.com/feed"
+remoteFeed = new RemoteFeed(feedUrl)
+
+$(document).on "ready page:load", remoteFeed.fetch
