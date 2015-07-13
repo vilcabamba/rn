@@ -247,6 +247,13 @@
         detail: Descripción
         price: Precio
         price_dollars: Precio
+      expositor:
+        tipo_personeria: Tipo de personería
+        dni: Documento de identidad
+        country: País
+        city: Ciudad
+        mobile: Teléfono celular
+        phone: Teléfono fijo
 
   devise:
     registrations:

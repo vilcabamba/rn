@@ -6,7 +6,6 @@ module Users
       devise_parameter_sanitizer.for(:sign_up) do |u|
         u.permit(
           :name,
-          :dni,
           :email,
           :password,
           :password_confirmation

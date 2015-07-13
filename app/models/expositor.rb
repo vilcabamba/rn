@@ -17,6 +17,8 @@
 class Expositor < ActiveRecord::Base
   belongs_to :user
 
+  enum tipo_personeria: [:natural, :juridica]
+
   begin :validations
     validates :user, presence: true
     validates :tipo_personeria, presence: true

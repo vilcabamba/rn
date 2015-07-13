@@ -1,0 +1,43 @@
+= form_for expositor do |f|
+  = render "shared/form_errors", resource: f.object
+
+  .form-group
+    = f.label :tipo_personeria
+    = f.select :tipo_personeria,
+               tipos_personeria,
+               {},
+               class: "form-control"
+
+  .form-group
+    = f.label :dni
+    = f.text_field :dni,
+                   required: true,
+                   class: "form-control",
+                   placeholder: t("views.expositores.dni_placeholder")
+
+  .form-group
+    = f.label :country
+    = f.select :country,
+               countries,
+               {},
+               class: "form-control"
+
+  .form-group
+    = f.label :city
+    = f.text_field :city,
+                   class: "form-control"
+
+  .form-group
+    = f.label :mobile
+    = f.telephone_field :mobile,
+                        class: "form-control"
+
+  .form-group
+    = f.label :phone
+    = f.telephone_field :phone,
+                        class: "form-control"
+
+  .actions
+    = f.submit class: "btn btn-primary",
+               value: t("views.expositores.submit"),
+               data: { disable_with: t("views.submitting") }
