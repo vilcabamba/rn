@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
-  resources :reservas do
+  resources :reservas, only: :new do
     collection do
       get :butaca
     end

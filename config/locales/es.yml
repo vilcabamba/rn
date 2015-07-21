@@ -264,3 +264,4 @@
     sessions:
       user:
         already_signed_out: Ya cerraste sesión
+        logout: Cerrar sesión

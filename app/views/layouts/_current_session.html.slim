@@ -1,6 +1,11 @@
 - if current_user
   .current-user
-    = decorated_current_user.avatar
-    span = decorated_current_user.name
+    .current-user-resume
+      = decorated_current_user.avatar
+      span.name = decorated_current_user.name_short
+    .current-user-actions
+      = link_to t("devise.sessions.user.logout"),
+                destroy_user_session_path,
+                method: :delete
 
 .clearfix

@@ -4,6 +4,10 @@ class UserDecorator < LittleDecorator
   GRAVATAR_DEFAULT = "retro"
   GRAVATAR_SIZE = "80"
 
+  def name_short
+    @name_short ||= record.name.split(" ").first(2).join(" ")
+  end
+
   ##
   # @!group avatar
 
