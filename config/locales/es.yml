@@ -263,5 +263,7 @@
       already_authenticated: Ya has iniciado sesión
     sessions:
       user:
+        signed_in: Bienvenido!
+        signed_out: Has cerrado tu sesión
         already_signed_out: Ya cerraste sesión
         logout: Cerrar sesión
