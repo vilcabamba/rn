@@ -254,6 +254,14 @@
         city: Ciudad
         mobile: Teléfono celular
         phone: Teléfono fijo
+        address: Dirección
+        name: Representante
+        company: Nombre de la empresa
+        web_site: Página web
+        photo: Fotografía de los productos
+        section: Sector
+        details: Detalle de productos o servicios
+        interest: Interés específico de participar en esta rueda de negocios
 
   devise:
     registrations:

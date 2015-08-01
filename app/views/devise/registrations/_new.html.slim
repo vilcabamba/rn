@@ -6,14 +6,9 @@
   = devise_error_messages_for(resource)
 
   .form-group
-    = f.label :name
-    = f.text_field :name,
-                   class: "form-control",
-                   required: true
-
-  .form-group
     = f.fields_for :expositor do |expositor|
-      .expositor-fields = render "expositor_form", f: expositor
+      .expositor-fields
+        = render "expositor_form", f: expositor
 
   .form-group
     = f.label :email
