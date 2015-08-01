@@ -1,5 +1,6 @@
 class ExpositoresController < ApplicationController
   expose(:expositor)
+  expose(:expositores)
   expose(:tipos_personeria) {
     Expositor.tipo_personeria.keys
   }
@@ -10,4 +11,11 @@ class ExpositoresController < ApplicationController
       memo
     end
   }
+  expose(:category_groups) {
+    (1..2).map do |page|
+      Category.order(:id).page(page).per(5)
+    end
+  }
+  def index
+  end
 end
