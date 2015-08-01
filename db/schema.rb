@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713042448) do
+ActiveRecord::Schema.define(version: 20150801165338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 20150713042448) do
     t.string   "mobile"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "address"
+    t.string   "company"
+    t.string   "web_site"
+    t.string   "photo"
+    t.text     "details"
+    t.string   "section"
+    t.text     "interest"
+    t.string   "alcance"
   end
 
   add_index "expositores", ["dni"], name: "index_expositores_on_dni", using: :btree
