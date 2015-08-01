@@ -10,6 +10,14 @@ module Users
       end
     }
 
+    def create
+      super do |resource|
+
+      end
+    end
+
+    private
+
     def update_sanitized_params
       devise_parameter_sanitizer.for(:sign_up) do |u|
         u.permit(
@@ -19,6 +27,13 @@ module Users
           :password_confirmation
         )
       end
+    end
+
+    def expositor_attributes
+      params.require(:user)
+            .permit(expositor_attributes: [
+              :country
+            ])
     end
   end
 end
