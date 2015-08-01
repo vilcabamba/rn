@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: expositors
+# Table name: expositores
 #
 #  id              :integer          not null, primary key
 #  user_id         :integer

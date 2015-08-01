@@ -1,0 +1,9 @@
+- content_for :title, t("views.expositores.title")
+
+- category_groups.each do |categories|
+  .row
+    .col-md-1
+    - categories.each do |category|
+      .col-md-2
+        img.img-circle src="/imageplaceholder.svg"
+        h4 = category.name
