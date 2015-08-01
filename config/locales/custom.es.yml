@@ -41,6 +41,9 @@
       submit: Actualizar
       dni_placeholder: Cédula / RUC
       intro: Por favor completa tu información básica
+    informate:
+      title: INFÓRMATE
+      subtitle: ¡Tus futuros clientes y socios estratégicos esperan por ti!
 
   actions:
     new: "Nuevo"
