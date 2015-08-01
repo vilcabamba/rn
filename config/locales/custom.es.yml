@@ -1,5 +1,11 @@
 "es":
   views:
+    home:
+      informate: Infórmate
+      inscribete: Inscríbete
+      reunete: Reúnete
+      title: Rueda de negocios
+
     submitting: "Enviando.."
     unauthorized: "No tienes permiso para realizar esta acción"
     delete: Eliminar

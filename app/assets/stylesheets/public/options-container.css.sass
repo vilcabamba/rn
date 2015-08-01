@@ -1,0 +1,63 @@
+$color-option--hover: #E44D3E
+$color-option--base: #1E4D81
+$color-border--base: #E4E4E3
+
+.optionsContainer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
+  a:focus
+    text-decoration: none
+    outline: none
+
+  .optionContent
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+
+    .title
+      h3
+        text-transform: uppercase
+        color: $color-option--base
+        transition: 0.3s
+
+    &:hover
+      .title h3
+        color: $color-option--hover
+      .option
+        background: $color-option--hover
+        & > div p
+          color: $color-option--hover
+
+    .option
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 2em 0
+      background: $color-option--base
+      border-radius: 50%
+      height: 250px
+      width: 250px
+      border: 5px solid $color-border--base
+      color: white
+      transition: 0.3s
+
+      &-number
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 60%
+        height: 60%
+        background: $color-border--base
+        border-radius: 50%
+        border: 5px solid white
+
+        p
+          font-size: 5em
+          color: $color-option--base
+          font-weight: bolder
+          transition: 0.3s

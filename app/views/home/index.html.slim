@@ -1,4 +1,24 @@
-- content_for :title, t("views.butacas.not_available")
+- content_for :title, t("views.home.title")
 
 .white-background.text-center
-  img src="map/feria.svg"
+  .optionsContainer
+    a.col-md-4.optionContent href="#"
+      .title
+        h3 = t("views.home.informate")
+      .option
+        .option-number
+          p 1
+
+    a.col-md-4.optionContent href="#"
+      .title
+        h3 = t("views.home.inscribete")
+      .option
+        .option-number
+          p 2
+
+    a.col-md-4.optionContent href="#"
+      .title
+        h3 = t("views.home.reunete")
+      .option
+        .option-number
+          p 3
