@@ -44,13 +44,14 @@
   = f.label :alcance
   = f.text_field :alcance,
                  class: "form-control"
-.row
-  .col-sm-9
-    .form-group
-      = f.label :photo
-      = f.text_field :photo,
-                     class: "form-control"
-  .col-sm-3
+
+= f.label :photo
+
+.input-group
+  = f.text_field :photo,
+                 class: "form-control"
+  span.input-group-btn
+    .btn.btn-default Examinar
 
 .form-group
   = f.label :details
