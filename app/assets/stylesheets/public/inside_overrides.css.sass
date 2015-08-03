@@ -19,10 +19,23 @@ body
       color: #e94f2b
 
 .section_template
+  background: white
   h1
-    color: white
-    text-shadow: 1px 1px 0 #000
+    color: #1E4D81
     font: 700 65px/1.2em "Montserrat", sans-serif
+    text-transform: uppercase
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      width: 60px
+      height: 1.5px
+      bottom: 0
+      left: 0
+      right: 0
+      margin: -0.2em auto
+      background: #E44D3E
 
 .body2
   background-color: #ffffff

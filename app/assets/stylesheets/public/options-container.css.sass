@@ -1,8 +1,10 @@
-$color-option--hover: #E44D3E
-$color-option--base: #1E4D81
+$color-selection--hover: #E44D3E
+$color-selection--base: #1E4D81
 $color-border--base: #E4E4E3
 
-.optionsContainer
+.OptionsContainer
+  max-width: 1000px
+  margin: 0 auto
   display: flex
   justify-content: center
   align-items: center
@@ -12,33 +14,34 @@ $color-border--base: #E4E4E3
     text-decoration: none
     outline: none
 
-  .optionContent
+  .Option
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     text-align: center
 
-    .title
+    &-title
       h3
         text-transform: uppercase
-        color: $color-option--base
+        letter-spacing: 1px
+        color: $color-selection--base
         transition: 0.3s
 
     &:hover
-      .title h3
-        color: $color-option--hover
-      .option
-        background: $color-option--hover
+      .Option-title h3
+        color: $color-selection--hover
+      .Option-selection
+        background: $color-selection--hover
         & > div p
-          color: $color-option--hover
+          color: $color-selection--hover
 
-    .option
+    &-selection
       display: flex
-      align-items: center
       justify-content: center
-      margin: 2em 0
-      background: $color-option--base
+      align-items: center
+      margin: 2em 0 3em
+      background: $color-selection--base
       border-radius: 50%
       height: 250px
       width: 250px
@@ -46,10 +49,23 @@ $color-border--base: #E4E4E3
       color: white
       transition: 0.3s
 
-      &-number
+      &::after
+        position: absolute
+        content: ""
+        width: 150px
+        height: 2px
+        background: gray
+        filter: blur(3px)
+        bottom: 0
+        left: 0
+        right: 0
+        margin: 0 auto 1em
+        border-radius: 50%
+
+      &--number
         display: flex
-        align-items: center
         justify-content: center
+        align-items: center
         width: 60%
         height: 60%
         background: $color-border--base
@@ -57,7 +73,7 @@ $color-border--base: #E4E4E3
         border: 5px solid white
 
         p
-          font-size: 5em
-          color: $color-option--base
+          font-size: 6em
+          color: $color-selection--base
           font-weight: bolder
           transition: 0.3s
