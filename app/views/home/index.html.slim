@@ -1,24 +1,24 @@
 - content_for :title, t("views.home.title")
 
 .white-background.text-center
-  .optionsContainer
-    a.col-md-4.optionContent href="#"
-      .title
+  .OptionsContainer
+    .col-md-4.Option
+      .Option-title
         h3 = t("views.home.informate")
-      .option
-        .option-number
+      a.Option-selection href="#"
+        .Option-selection--number
           p 1
 
-    a.col-md-4.optionContent href="#"
-      .title
+    .col-md-4.Option
+      .Option-title
         h3 = t("views.home.inscribete")
-      .option
-        .option-number
+      a.Option-selection href="#"
+        .Option-selection--number
           p 2
 
-    a.col-md-4.optionContent href="#"
-      .title
+    .col-md-4.Option
+      .Option-title
         h3 = t("views.home.reunete")
-      .option
-        .option-number
+      a.Option-selection href="#"
+        .Option-selection--number
           p 3
