@@ -3,7 +3,6 @@
 # Table name: users
 #
 #  id                     :integer          not null, primary key
-#  name                   :string           not null
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -25,13 +24,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  delegate :name, to: :expositor
+
   begin :relationships
     has_one :expositor, dependent: :destroy
   end
 
   accepts_nested_attributes_for :expositor
 
-  begin :validations
-    validates :name, presence: true
-  end
 end
