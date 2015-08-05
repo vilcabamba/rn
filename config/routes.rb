@@ -49,7 +49,7 @@ Rails.application.routes.draw do
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
-  get "informate", :to => 'informate#index'
+  resource :informate
   resources :reservas, only: :new do
     collection do
       get :butaca
