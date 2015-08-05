@@ -10,11 +10,11 @@ module Users
       end
     }
 
-    def create
-      super do |resource|
-
+    expose(:sections) {
+      Category.all.map do |category|
+        [category.name, category.id]
       end
-    end
+    }
 
     private
 
@@ -24,7 +24,20 @@ module Users
           :name,
           :email,
           :password,
-          :password_confirmation
+          :password_confirmation,
+          expositor_attributes: [
+            :company,
+            :name,
+            :address,
+            :country,
+            :phone,
+            :web_site,
+            :section_id,
+            :alcance,
+            :photo,
+            :details,
+            :interest
+          ]
         )
       end
     end

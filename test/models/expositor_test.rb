@@ -6,10 +6,7 @@
 #  user_id         :integer
 #  tipo_personeria :integer          default("0")
 #  country         :string
-#  city            :string
-#  dni             :string           not null
 #  phone           :string
-#  mobile          :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  address         :string
@@ -17,9 +14,10 @@
 #  web_site        :string
 #  photo           :string
 #  details         :text
-#  section         :string
 #  interest        :text
 #  alcance         :string
+#  section_id      :integer
+#  name            :string           not null
 #
 
 require 'test_helper'

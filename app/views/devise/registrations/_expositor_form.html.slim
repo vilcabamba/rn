@@ -36,9 +36,11 @@
                  class: "form-control"
   .col-sm-6
     .form-group
-      = f.label :section
-      = f.text_field :section,
-                     class: "form-control"
+      = f.label :section_id
+      = f.select :section_id,
+                 sections,
+                 {},
+                 class: "form-control"
 
 .form-group
   = f.label :alcance
@@ -49,7 +51,7 @@
 
 .form-group
   .input-group
-    = f.text_field :photo,
+    = f.file_field :photo,
                    class: "form-control"
     span.input-group-btn
       .btn.btn-default Examinar
@@ -65,8 +67,3 @@
   = f.text_area :interest,
                  class: "form-control",
                  placeholder: t("views.sign_up_form.limit_caracters")
-
-.form-group
-  = f.label :web_site
-  = f.text_field :web_site,
-                 class: "form-control"

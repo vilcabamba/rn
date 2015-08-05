@@ -1,13 +1,13 @@
-- resource.build_expositor
+- resource.build_expositor unless resource.expositor
 
 = form_for resource,
            as: resource_name,
            url: registration_path(resource_name) do |f|
   = devise_error_messages_for(resource)
-  
+
   .container
     p.SignUp-introduction= t("views.sign_up_form.introduction")
-  
+
   .expositorFields.container
     .form-group
       = f.fields_for :expositor do |expositor|
