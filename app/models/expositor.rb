@@ -12,12 +12,22 @@
 #  mobile          :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  address         :string
+#  company         :string
+#  web_site        :string
+#  photo           :string
+#  details         :text
+#  section         :string
+#  interest        :text
+#  alcance         :string
 #
 
 class Expositor < ActiveRecord::Base
   belongs_to :user
 
   enum tipo_personeria: [:natural, :juridica]
+
+  attr_accessor :name
 
   begin :validations
     validates :user, presence: true

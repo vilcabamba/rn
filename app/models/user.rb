@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
     has_one :expositor, dependent: :destroy
   end
 
+  accepts_nested_attributes_for :expositor
+
   begin :validations
     validates :name, presence: true
   end
