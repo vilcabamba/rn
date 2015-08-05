@@ -18,6 +18,7 @@
 #  alcance         :string
 #  section_id      :integer
 #  name            :string           not null
+#  category_id     :integer          not null
 #
 
 require 'test_helper'

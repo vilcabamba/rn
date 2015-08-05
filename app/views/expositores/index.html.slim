@@ -7,3 +7,9 @@
       .col-md-2
         img.img-circle src="/imageplaceholder.svg"
         h4 = category.name
+
+        .hidden.category-expositores-carousel
+          - category.expositores.each do |expositor|
+            .expositor-on-carousel
+              = expositor.photo
+              = expositor.company
