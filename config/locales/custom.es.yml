@@ -5,7 +5,9 @@
       inscribete: Inscríbete
       reunete: Reúnete
       title: Rueda de negocios
-
+    sign_up_form:
+      limit_caracters: "Máximo 500 caracteres"
+      introduction: "¡Estás a un paso de formar parte del evento de negocios más importante del año!"
     submitting: "Enviando.."
     unauthorized: "No tienes permiso para realizar esta acción"
     delete: Eliminar

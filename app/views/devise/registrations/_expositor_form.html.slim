@@ -47,21 +47,24 @@
 
 = f.label :photo
 
-.input-group
-  = f.text_field :photo,
-                 class: "form-control"
-  span.input-group-btn
-    .btn.btn-default Examinar
+.form-group
+  .input-group
+    = f.text_field :photo,
+                   class: "form-control"
+    span.input-group-btn
+      .btn.btn-default Examinar
 
 .form-group
   = f.label :details
-  = f.text_field :details,
-                 class: "form-control"
+  = f.text_area :details,
+                 class: "form-control",
+                   placeholder: t("views.sign_up_form.limit_caracters")
 
 .form-group
   = f.label :interest
-  = f.text_field :interest,
-                 class: "form-control"
+  = f.text_area :interest,
+                 class: "form-control",
+                 placeholder: t("views.sign_up_form.limit_caracters")
 
 .form-group
   = f.label :web_site

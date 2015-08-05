@@ -52,3 +52,48 @@ h2,h1.singletitle
 
 input, textarea, input checkbox, input radio, select, file
   float: none
+
+.form-group
+  text-align: left
+
+label
+  margin-bottom: 5px !important
+  text-transform: uppercase
+  color: #E44D3E
+  font-weight: 500t
+
+textarea.form-control
+  height: 150px
+  max-height: 350px
+  font-style: normal
+  font-weight: normal
+  resize: vertical
+
+  &::placeholder
+    font-style: italic
+    font-weight: 300
+
+.form-control
+  border-radius: 0
+  border: none
+  border-left: 4px solid #E44D3E
+  box-shadow: none
+  background: rgba(242,241,241, 0.92)
+
+  &:focus
+    border-color: #E44D3E
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 0 8px rgba(233, 169, 103, 0.6)
+
+.btn-default
+  border-radius: 0
+  border: none
+  background: #E44D3E
+  color: white
+
+  &:hover
+    background: #C24033
+    color: white
+
+  &:focus
+    color: white
+    background-color: #C24033
