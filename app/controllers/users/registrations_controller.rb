@@ -10,7 +10,7 @@ module Users
       end
     }
 
-    expose(:sections) {
+    expose(:categories) {
       Category.all.map do |category|
         [category.name, category.id]
       end
@@ -32,11 +32,11 @@ module Users
             :country,
             :phone,
             :web_site,
-            :section_id,
             :alcance,
             :photo,
             :details,
-            :interest
+            :interest,
+            :category_id
           ]
         )
       end

@@ -18,10 +18,12 @@
 #  alcance         :string
 #  section_id      :integer
 #  name            :string           not null
+#  category_id     :integer          not null
 #
 
 class Expositor < ActiveRecord::Base
   belongs_to :user
+  belongs_to :category
 
   enum tipo_personeria: [:natural, :juridica]
 

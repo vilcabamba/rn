@@ -259,7 +259,7 @@
         company: Nombre de la empresa
         web_site: Página web
         photo: Fotografía de los productos
-        section_id: Sector
+        category_id: Sector
         details: Detalle de productos o servicios
         interest: Interés específico de participar en esta rueda de negocios
 
