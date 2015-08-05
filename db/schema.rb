@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 20150801175219) do
     t.string   "mobile"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "address"
+    t.string   "company"
+    t.string   "web_site"
+    t.string   "photo"
+    t.text     "details"
+    t.string   "section"
+    t.text     "interest"
+    t.string   "alcance"
   end
 
   add_index "expositores", ["dni"], name: "index_expositores_on_dni", using: :btree

@@ -1,0 +1,72 @@
+.form-group
+  = f.label :company
+  = f.text_field :company,
+                 class: "form-control",
+                 autofocus: true
+.form-group
+  = f.label :name
+  = f.text_field :name,
+                 class: "form-control",
+                 required: true
+
+.form-group
+  = f.label :address
+  = f.text_field :address,
+                 class: "form-control"
+
+.row
+  .col-sm-6
+    .form-group
+      = f.label :country
+      = f.select :country,
+                 countries,
+                 {},
+                 class: "form-control"
+  .col-sm-6
+    .form-group
+      = f.label :phone
+      = f.telephone_field :phone,
+                          class: "form-control"
+
+.row
+  .col-sm-6
+    .form-group
+      = f.label :web_site
+      = f.text_field :web_site,
+                 class: "form-control"
+  .col-sm-6
+    .form-group
+      = f.label :section
+      = f.text_field :section,
+                     class: "form-control"
+
+.form-group
+  = f.label :alcance
+  = f.text_field :alcance,
+                 class: "form-control"
+
+= f.label :photo
+
+.form-group
+  .input-group
+    = f.text_field :photo,
+                   class: "form-control"
+    span.input-group-btn
+      .btn.btn-default Examinar
+
+.form-group
+  = f.label :details
+  = f.text_area :details,
+                 class: "form-control",
+                   placeholder: t("views.sign_up_form.limit_caracters")
+
+.form-group
+  = f.label :interest
+  = f.text_area :interest,
+                 class: "form-control",
+                 placeholder: t("views.sign_up_form.limit_caracters")
+
+.form-group
+  = f.label :web_site
+  = f.text_field :web_site,
+                 class: "form-control"

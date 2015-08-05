@@ -12,6 +12,14 @@
 #  mobile          :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  address         :string
+#  company         :string
+#  web_site        :string
+#  photo           :string
+#  details         :text
+#  section         :string
+#  interest        :text
+#  alcance         :string
 #
 
 require 'test_helper'
