@@ -9,7 +9,8 @@ class AuthFailure < Devise::FailureApp
     if http_auth?
       http_auth
     else
-      redirect
+      flash[:alert] = I18n.t("devise.sessions.user.not_signed_in")
+      redirect_to root_path
     end
   end
 end

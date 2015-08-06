@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805230529) do
+ActiveRecord::Schema.define(version: 20150806194141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,10 @@ ActiveRecord::Schema.define(version: 20150805230529) do
     t.string   "alcance"
     t.string   "name",                        null: false
     t.integer  "category_id",                 null: false
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "skype"
+    t.string   "instagram"
   end
 
   add_index "expositores", ["category_id"], name: "index_expositores_on_category_id", using: :btree

@@ -273,6 +273,7 @@
         invalid: Usuario o contraseña incorrectos
     sessions:
       user:
+        not_signed_in: Necesitas iniciar sesión
         signed_in: Bienvenido!
         signed_out: Has cerrado tu sesión
         already_signed_out: Ya cerraste sesión

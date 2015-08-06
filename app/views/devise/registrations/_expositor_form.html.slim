@@ -19,7 +19,7 @@
     .form-group
       = f.label :country
       = f.select :country,
-                 countries,
+                 countries_for_select,
                  {},
                  class: "form-control"
   .col-sm-6
@@ -38,7 +38,7 @@
     .form-group
       = f.label :category_id
       = f.select :category_id,
-                 categories,
+                 categories_for_select,
                  {},
                  class: "form-control"
 

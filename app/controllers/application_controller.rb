@@ -17,6 +17,20 @@ class ApplicationController < ActionController::Base
     decorate current_user
   }
 
+  expose(:countries_for_select) {
+    countries = ISO3166::Country.translations(I18n.locale)
+    countries.inject({}) do |memo, (key, value)|
+      memo[value] = key
+      memo
+    end
+  }
+
+  expose(:categories_for_select) {
+    Category.all.map do |category|
+      [category.name, category.id]
+    end
+  }
+
   protected
 
   def t(*args)
