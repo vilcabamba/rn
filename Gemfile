@@ -55,3 +55,7 @@ group :development, :test do
 
   gem "annotate"
 end
+
+group :heroku do
+  gem "rails_12factor"
+end
