@@ -1,4 +1,5 @@
 class ExpositoresController < ApplicationController
+  add_breadcrumb t("views.home.index"), :root_path
   expose(:expositor)
   expose(:expositores)
   expose(:tipos_personeria) {
@@ -18,6 +19,7 @@ class ExpositoresController < ApplicationController
   }
 
   def index
+    add_breadcrumb t("views.home.expositores"), :expositores_path
     if params[:signed_in].present?
       flash.now[:alert] = t("devise.failure.already_authenticated")
     end
