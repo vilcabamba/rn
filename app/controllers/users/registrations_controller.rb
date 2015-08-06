@@ -1,5 +1,7 @@
 module Users
   class RegistrationsController < Devise::RegistrationsController
+    add_breadcrumb t("views.home.index"), :root_path
+    add_breadcrumb t("views.home.inscribete"), :new_user_registration_path
     before_filter :update_sanitized_params, if: :devise_controller?
 
     private

@@ -10,6 +10,7 @@
     current_user:
       edit_profile: Editar información
     home:
+      index: Home
       informate: Infórmate
       inscribete: Inscríbete
       expositores: Reúnete

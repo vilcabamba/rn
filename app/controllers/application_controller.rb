@@ -34,6 +34,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def t(*args)
+    self.class.t(*args)
+  end
+
+  def self.t(*args)
     I18n.t(*args)
   end
 end
