@@ -1,0 +1,48 @@
+$categoryHeight: 400px
+
+@keyframes toggleCategory
+  from
+    height: auto
+  to
+    height: $categoryHeight
+
+.categories
+  position: relative
+  .categories-groups
+    display: flex
+    overflow: hidden
+    justify-content: space-between
+    align-items: flex-start
+    .category
+      position: initial
+      cursor: pointer
+      &.active
+        animation: toggleCategory 0.5s
+        height: $categoryHeight
+        .category-expositores-carousel
+          display: flex
+      .category-expositores-carousel
+        position: absolute
+        left: 0
+        width: 100%
+        height: auto
+        display: none
+        justify-content: space-between
+        .expositor-on-carousel
+          margin: 0 0 0 2em
+
+.category-expositores-carousel
+  .arrow-left, .arrow-right
+    position: absolute
+    top: 50%
+    transform: translate(50%, -50%)
+    cursor: pointer
+    z-index: 10
+  .arrow-left
+    left: 10px
+  .arrow-right
+    right: 10px
+  .expositores-container
+    display: flex
+    transition: 0.3s
+    width: 100%
