@@ -1,9 +1,11 @@
 "es":
   views:
+    current_user:
+      edit_profile: Editar información
     home:
       informate: Infórmate
       inscribete: Inscríbete
-      reunete: Reúnete
+      expositores: Reúnete
       title: Rueda de negocios
     sign_up_form:
       limit_caracters: "Máximo 500 caracteres"

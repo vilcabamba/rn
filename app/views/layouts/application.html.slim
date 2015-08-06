@@ -1,25 +1,23 @@
 doctype html
 html
-head
-  title 186 Feria de Loja | Innovando
-  = stylesheet_link_tag "public",
-                        media: "all",
-                        "data-turbolinks-track" => true
-  = javascript_include_tag "public",
-                           "data-turbolinks-track" => true
-  = csrf_meta_tags
-body
-  = render "layouts/public_navbar"
-  = render "layouts/current_session"
-  = render "layouts/header_section"
+  head
+    title 186 Feria de Loja | Innovando
+    = stylesheet_link_tag "public",
+                          media: "all",
+                          "data-turbolinks-track" => true
+    = javascript_include_tag "public",
+                             "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    = render "layouts/public_navbar"
+    = render "layouts/header_section"
 
-  .main-content
-    - if breadcrumbs.any?
-      ol.breadcrumb
-        = render_breadcrumbs tag: :li, separator: ""
+    .main-content
+      - if breadcrumbs.any?
+        ol.breadcrumb
+          = render_breadcrumbs tag: :li, separator: ""
 
-    = yield
+      = yield
 
-  = render "layouts/footer"
-
-  = stylesheet_link_tag external_fonts_url
+    = render "layouts/footer"
+    = stylesheet_link_tag external_fonts_url
