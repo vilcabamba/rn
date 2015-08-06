@@ -3,23 +3,11 @@
 
 .white-background.text-center
   .OptionsContainer
-    .col-md-4.Option
-      .Option-title
-        h3 = t("views.home.informate")
-      = link_to informate_path, class: "Option-selection" do
-        .Option-selection--number
-          p 1
-
-    .col-md-4.Option
-      .Option-title
-        h3 = t("views.home.inscribete")
-      = link_to new_user_registration_path, class: "Option-selection" do
-        .Option-selection--number
-          p 2
-
-    .col-md-4.Option
-      .Option-title
-        h3 = t("views.home.reunete")
-      = link_to expositores_path, class: "Option-selection" do
-        .Option-selection--number
-          p 3
+    - actions.each_with_index do |action, index|
+      = link_to send("#{action}_path"),
+                class: "col-md-4 Option" do
+        .Option-title
+          h3 = t("views.home.#{action}")
+        .Option-selection
+          .Option-selection--number
+            p = index + 1

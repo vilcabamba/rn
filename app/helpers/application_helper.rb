@@ -16,4 +16,16 @@ module ApplicationHelper
       key
     end
   end
+
+  ##
+  # @return [String] sign-up path if not logged
+  #   in. Will send to expositores if already
+  #   logged in
+  def inscribete_path
+    if current_user
+      expositores_path(signed_in: true)
+    else
+      new_user_registration_path
+    end
+  end
 end

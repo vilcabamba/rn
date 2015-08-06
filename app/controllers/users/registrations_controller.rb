@@ -41,12 +41,5 @@ module Users
         )
       end
     end
-
-    def expositor_attributes
-      params.require(:user)
-            .permit(expositor_attributes: [
-              :country
-            ])
-    end
   end
 end

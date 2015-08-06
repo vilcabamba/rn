@@ -16,6 +16,10 @@ class ExpositoresController < ApplicationController
       Category.order(:id).page(page).per(5)
     end
   }
+
   def index
+    if params[:signed_in].present?
+      flash[:alert] = t("devise.failure.already_authenticated")
+    end
   end
 end
