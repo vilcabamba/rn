@@ -1,9 +1,15 @@
 class MeController < ApplicationController
   before_action :authenticate_user!
+  add_breadcrumb t("views.home.index"), :root_path
+  add_breadcrumb t("views.home.expositores"), :expositores_path
 
   expose(:expositor) {
     current_user.expositor
   }
+
+  def show
+    add_breadcrumb t("views.current_user.edit_profile"), :me_path
+  end
 
   def update
     if expositor.update(expositor_params)
