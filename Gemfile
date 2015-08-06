@@ -42,6 +42,7 @@ gem "dotenv-rails", "~> 2.0.2"
 gem "countries"
 gem "kaminari"
 gem "autoprefixer-rails"
+gem "carrierwave"
 
 group :development, :test do
   gem 'pry'

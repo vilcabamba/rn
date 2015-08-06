@@ -1,5 +1,12 @@
 "es":
   views:
+    me:
+      account_info: Información de la cuenta
+      social_networks: Redes sociales
+      updated: Cuenta actualizada
+      not_updated: Cuenta no actualizada
+      upload_photo: Sube una foto
+      choose_file: Examinar
     current_user:
       edit_profile: Editar información
     home:

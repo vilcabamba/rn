@@ -25,7 +25,11 @@ class Expositor < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
 
+  SOCIAL_NETWORKS = %w(facebook twitter skype instagram)
+
   enum tipo_personeria: [:natural, :juridica]
+
+  mount_uploader :photo, ExpositorPhotoUploader
 
   begin :validations
     validates :tipo_personeria, presence: true

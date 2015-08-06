@@ -19,7 +19,7 @@
     .form-group
       = f.label :country
       = f.select :country,
-                 countries,
+                 countries_for_select,
                  {},
                  class: "form-control"
   .col-sm-6
@@ -38,7 +38,7 @@
     .form-group
       = f.label :category_id
       = f.select :category_id,
-                 categories,
+                 categories_for_select,
                  {},
                  class: "form-control"
 
@@ -47,14 +47,27 @@
   = f.text_field :alcance,
                  class: "form-control"
 
-= f.label :photo
-
 .form-group
-  .input-group
-    = f.file_field :photo,
+  = f.label :photo
+
+  .row
+    .col-xs-9
+      .form-control-static.expositor-photo-form
+        - if f.object.photo?
+          = link_to f.object.photo.file.filename,
+                    f.object.photo_url,
+                    target: "_blank"
+        - else
+          .text-muted = t("views.me.upload_photo")
+
+    .col-xs-3.text-right
+      .btn.btn-default.choose-file-btn
+        = t("views.me.choose_file")
+
+    .hidden
+      = f.file_field :photo,
                    class: "form-control"
-    span.input-group-btn
-      .btn.btn-default Examinar
+      = f.hidden_field :photo_cache
 
 .form-group
   = f.label :details
