@@ -1,10 +1,14 @@
-$categoryHeight: 400px
+$categoryHeight: 450px
+$color-Orange: #E6573B
+$color-gray-text: #CBCCCB
+$color-blue: #1E4D81
+$color-gray-expositors-carousel: #F2F1F1
 
-@keyframes toggleCategory
-  from
-    height: auto
-  to
-    height: $categoryHeight
+// @keyframes toggleCategory
+//   from
+//     height: auto
+//   to
+//     height: $categoryHeight
 
 .categories
   position: relative
@@ -16,9 +20,37 @@ $categoryHeight: 400px
     .category
       position: initial
       cursor: pointer
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 36em
+      height: 197px
+      margin-top: 1em
+      padding-top: 1em
+      border-right: 1px solid $color-gray-text
+      transition: all 0.3s
+      &:hover
+        background: $color-Orange
+        h4
+          color: white
+      &:last-child
+        border-right: none
+        padding-right: none
+
+      h4
+        text-transform: uppercase
+        color: $color-gray-text
+        font-weight: normal
+        font-size: 1em
+
       &.active
         animation: toggleCategory 0.5s
         height: $categoryHeight
+        background-color: $color-Orange
+        transition: 0.3s
+        h4
+          color: white
+
         .category-expositores-carousel
           display: flex
       .category-expositores-carousel
@@ -28,21 +60,42 @@ $categoryHeight: 400px
         height: auto
         display: none
         justify-content: space-between
+        z-index: 1
+        background: $color-gray-expositors-carousel
+        margin-top: 0.8em
+        border: 3px solid $color-Orange
+        border-right: none
+        border-left: none
+        transition: all 0.3s
         .expositor-on-carousel
           margin: 0 0 0 2em
+          img.img-circle
+            border: 2px solid $color-blue
+          .expositor-name
+            top: 0.5em
+            text-transform: uppercase
+            position: relative
+            color: $color-blue
 
 .category-expositores-carousel
   .arrow-left, .arrow-right
     position: absolute
     top: 50%
-    transform: translate(50%, -50%)
+    transform: translateY(-50%)
     cursor: pointer
     z-index: 10
+    font-size: 2em
+    color: gray
+    &:hover
+      color: $color-Orange
   .arrow-left
     left: 10px
   .arrow-right
     right: 10px
   .expositores-container
     display: flex
+    justify-content: center
     transition: 0.3s
     width: 100%
+    padding: 1em
+    margin: 2em 0
