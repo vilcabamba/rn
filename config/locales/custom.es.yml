@@ -1,5 +1,7 @@
 "es":
   views:
+    current_user:
+      edit_profile: Editar información
     home:
       informate: Infórmate
       inscribete: Inscríbete

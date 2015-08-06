@@ -269,6 +269,8 @@
         signed_up: Registrado exitosamente
     failure:
       already_authenticated: Ya has iniciado sesión
+      user:
+        invalid: Usuario o contraseña incorrectos
     sessions:
       user:
         signed_in: Bienvenido!
