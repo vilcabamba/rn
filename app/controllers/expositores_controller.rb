@@ -19,7 +19,7 @@ class ExpositoresController < ApplicationController
 
   def index
     if params[:signed_in].present?
-      flash[:alert] = t("devise.failure.already_authenticated")
+      flash.now[:alert] = t("devise.failure.already_authenticated")
     end
   end
 end

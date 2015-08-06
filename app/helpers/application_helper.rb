@@ -23,7 +23,7 @@ module ApplicationHelper
   #   logged in
   def inscribete_path
     if current_user
-      expositores_path(signed_in: true)
+      expositores_path(signed_in: 1)
     else
       new_user_registration_path
     end

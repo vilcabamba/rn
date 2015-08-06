@@ -11,7 +11,10 @@ class ApplicationController < ActionController::Base
     end
 
     def store_location!
-      store_location_for(:user, request.fullpath)
+      store_location_for(
+        :user,
+        request.fullpath
+      ) if request.get?
     end
   end
 end
