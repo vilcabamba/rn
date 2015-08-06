@@ -20,6 +20,7 @@ module Users
             :web_site,
             :alcance,
             :photo,
+            :photo_cache,
             :details,
             :interest,
             :category_id

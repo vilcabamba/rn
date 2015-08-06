@@ -29,6 +29,8 @@ class Expositor < ActiveRecord::Base
 
   enum tipo_personeria: [:natural, :juridica]
 
+  mount_uploader :photo, ExpositorPhotoUploader
+
   begin :validations
     validates :tipo_personeria, presence: true
     validates :name, presence: true

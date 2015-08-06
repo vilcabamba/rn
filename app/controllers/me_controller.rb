@@ -29,6 +29,8 @@ class MeController < ApplicationController
                   :alcance,
                   :details,
                   :interest,
+                  :photo,
+                  :photo_cache,
                   :facebook,
                   :twitter,
                   :skype,
