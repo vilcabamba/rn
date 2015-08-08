@@ -1,0 +1,41 @@
+.container.current-expositors
+  
+  .expositor-logo
+    .expositor-logo-image
+      img.img-square src="/imageplaceholder.svg"
+    .expositor-logo-title
+      h4 = t("views.current_expositor.info_company")
+      - if current_user && current_user == expositor.user
+        = link_to "", me_path, class: "glyphicon glyphicon-pencil"
+    .expositor-logo-description
+      p 
+        span = t("views.current_expositor.email")
+        span = expositor.user.email
+      p
+        span = t("views.current_expositor.phone")
+        span = expositor.phone
+      p 
+        span = t("views.current_expositor.address")
+        span = expositor.address    
+    .expositor-logo-socialIcons
+      a.mk-social-facebook href="#"
+      a.mk-social-twitter href="#"
+      a.mk-social-skype href="#"
+      a.mk-social-identica href="#"
+    
+  .expositor-info
+    .expositor-info-title
+      h1 = expositor.company
+    .expositor-info-subtitles
+      h4 = expositor.category.name
+      h4 = expositor.country
+    .expositor-info-description
+      p = expositor.details
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .expositor-info-agenda
+      h4 = t("views.current_expositor.schedule_meeting")
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .expositor-info-meeting
+      .timeLine
+        - 15.times
+            .point

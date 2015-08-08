@@ -60,6 +60,12 @@
       dni_placeholder: Cédula / RUC
       intro: Por favor completa tu información básica
       title: REÚNETE
+    current_expositor:
+      info_company: Información Empresarial
+      schedule_meeting: Agenda tu reunión
+      email: Email
+      address: Dirección
+      phone: Teléfono
     informate:
       title: INFÓRMATE
       subtitle: ¡Tus futuros clientes y socios estratégicos esperan por ti!
