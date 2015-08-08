@@ -1,6 +1,4 @@
-$color-selection--hover: #E44D3E
-$color-selection--base: #1E4D81
-$color-border--base: #E4E4E3
+@import "../variables"
 
 .OptionsContainer
   max-width: 1000px
@@ -25,27 +23,27 @@ $color-border--base: #E4E4E3
       h3
         text-transform: uppercase
         letter-spacing: 1px
-        color: $color-selection--base
+        color: $color-blue
         transition: 0.3s
 
     &:hover
       .Option-title h3
-        color: $color-selection--hover
+        color: $color-orange
       .Option-selection
-        background: $color-selection--hover
+        background: $color-orange
         & > div p
-          color: $color-selection--hover
+          color: $color-orange
 
     &-selection
       display: flex
       justify-content: center
       align-items: center
       margin: 2em 0 3em
-      background: $color-selection--base
+      background: $color-blue
       border-radius: 50%
       height: 250px
       width: 250px
-      border: 5px solid $color-border--base
+      border: 5px solid $color-gray-light
       color: white
       transition: 0.3s
 
@@ -68,12 +66,12 @@ $color-border--base: #E4E4E3
         align-items: center
         width: 60%
         height: 60%
-        background: $color-border--base
+        background: $color-gray-light
         border-radius: 50%
         border: 5px solid white
 
         p
           font-size: 6em
-          color: $color-selection--base
+          color: $color-blue
           font-weight: bolder
           transition: 0.3s

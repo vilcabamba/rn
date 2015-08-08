@@ -1,0 +1,125 @@
+@import "../variables"
+
+.current-expositors
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-wrap: wrap
+
+  h4
+    text-align: left
+    margin-top: 0
+    text-transform: uppercase
+    color: $color-blue
+
+  & > div
+    text-align: left
+
+  .expositor-logo
+    padding-right: 1em
+    width: 260px
+
+    &-image
+      img
+        width: 100%
+
+    &-title
+      display: flex
+      h4
+        text-transform: capitalize
+        margin: 1em 0.7em 1em 0
+      .glyphicon
+        align-self: center
+
+    &-description
+      margin-bottom: 2em
+      p
+        color: gray
+        font-style: italic
+        font-size: 0.8em
+        span
+          &:first-child
+            margin-right: 1em
+            &::after
+              content: ":"
+
+    &-socialIcons
+      text-align: center
+      padding: 1em
+      a
+        margin-right: 1em
+        font-size: 1.5em
+        color: white
+        background: gray
+        border-radius: 50%
+        padding: 0.3em
+        &:last-child
+          margin-right: 0
+      .mk-social
+        &-facebook
+          background: $facebook-color
+        &-twitter
+          background: $twitter-color
+        &-skype
+          background: $skype-color
+        &-identica
+          background: $instagram-color
+
+  .expositor-info
+    width: 70%
+    padding-left: 1em
+    border-left: 1px solid rgba(gray, 0.5)
+    min-height: 40em
+
+    &-title
+      h1
+        text-align: left
+        padding: 0
+        margin: 0
+        color: $color-orange
+        font-weight: bolder
+        letter-spacing: -3px
+
+    &-subtitles
+      h4
+        &:last-child
+          &::after
+            content: ""
+        &::after
+          content: " | "
+          margin-right: 0.5em
+
+    &-subtitles
+      display: flex
+
+    &-description
+      margin-bottom: 3em
+      & > p
+        margin-top: 1em
+
+    &-meeting
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 2em
+      width: 100%
+      height: 200px
+      .timeLine
+        display: flex
+        align-items: center
+        justify-content: center
+        .point
+          background: $color-green
+          width: 12px
+          height: 12px
+          border-radius: 50%
+          margin-right: 30px
+          position: relative
+          &::before
+            content: ""
+            height: 4px
+            width: 3em
+            background-color: $color-green
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
