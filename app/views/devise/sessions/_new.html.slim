@@ -22,8 +22,5 @@
         = t "activerecord.attributes.user.remember_me"
 
   .actions
-    = link_to t("views.users.forgot_password"),
-              new_password_path(resource_name)
-
     = f.submit t("views.users.log_in"),
-               class: "btn btn-primary"
+               class: "btn btn-default"
