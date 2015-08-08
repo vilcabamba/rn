@@ -1,5 +1,6 @@
 class MeController < ApplicationController
   before_action :authenticate_user!
+
   add_breadcrumb t("views.home.index"), :root_path
   add_breadcrumb t("views.home.expositores"), :expositores_path
 
@@ -8,13 +9,15 @@ class MeController < ApplicationController
   }
 
   def show
+    add_breadcrumb expositor.category.name
+    add_breadcrumb expositor.company, expositor_path(expositor)
     add_breadcrumb t("views.current_user.edit_profile"), :me_path
   end
 
   def update
     if expositor.update(expositor_params)
       flash[:notice] = t("views.me.updated")
-      redirect_to action: :show
+      redirect_to expositor_path(expositor)
     else
       flash[:error] = t("views.me.not_updated")
       render :show

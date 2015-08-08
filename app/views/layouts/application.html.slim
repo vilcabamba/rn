@@ -14,8 +14,9 @@ html
 
     .main-content
       - if breadcrumbs.any?
-        ol.breadcrumb
-          = render_breadcrumbs tag: :li, separator: ""
+        .breadcrumb-wrapper
+          ol.breadcrumb
+            = render_breadcrumbs tag: :li, separator: ""
 
       = yield
 

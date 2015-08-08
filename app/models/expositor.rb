@@ -16,9 +16,12 @@
 #  details         :text
 #  interest        :text
 #  alcance         :string
-#  section_id      :integer
 #  name            :string           not null
 #  category_id     :integer          not null
+#  facebook        :string
+#  twitter         :string
+#  skype           :string
+#  instagram       :string
 #
 
 class Expositor < ActiveRecord::Base
