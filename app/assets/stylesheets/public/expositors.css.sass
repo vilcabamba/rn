@@ -1,8 +1,4 @@
-$categoryHeight: 450px
-$color-Orange: #E6573B
-$color-gray-text: #CBCCCB
-$color-blue: #1E4D81
-$color-gray-expositors-carousel: #F2F1F1
+@import "../variables"
 
 .categories
   position: relative
@@ -24,7 +20,7 @@ $color-gray-expositors-carousel: #F2F1F1
       border-right: 1px solid $color-gray-text
       transition: all 0.3s
       &:hover
-        background: $color-Orange
+        background: $color-orange
         h4
           color: white
       &:last-child
@@ -39,7 +35,7 @@ $color-gray-expositors-carousel: #F2F1F1
 
       &.active
         height: $categoryHeight
-        background-color: $color-Orange
+        background-color: $color-orange
         transition: all 0.3s linear
         h4
           color: white
@@ -58,7 +54,7 @@ $color-gray-expositors-carousel: #F2F1F1
         justify-content: space-between
         background: $color-gray-expositors-carousel
         margin-top: 0.8em
-        border: 3px solid $color-Orange
+        border: 3px solid $color-orange
         border-right: none
         border-left: none
         transition: transform 0.33s linear
@@ -83,7 +79,7 @@ $color-gray-expositors-carousel: #F2F1F1
     font-size: 2em
     color: gray
     &:hover
-      color: $color-Orange
+      color: $color-orange
   .arrow-left
     left: 10px
   .arrow-right

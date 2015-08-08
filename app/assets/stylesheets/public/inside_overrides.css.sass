@@ -1,5 +1,7 @@
+@import "../variables"
+
 body
-  background-color: #dbdbdb
+  background-color: $color-gray-text
 
 #header
   .container-out
@@ -17,16 +19,16 @@ body
       font: 600 13px/1.2em "Raleway", sans-serif
       letter-spacing: -0.025em
       &:hover
-        color: #e94f2b
+        color: $color-orange
     .current_page_item a
-      color: #e94f2b
+      color: $color-orange
 
 .section_template
   h1
     text-transform: uppercase
     position: relative
     color: white
-    text-shadow: 1px 1px 0 #000
+    text-shadow: 1px 1px 0 black
     font: 700 65px/1.2em "Montserrat", sans-serif
 
   &.section_template_white_bg
@@ -42,13 +44,13 @@ body
         left: 0
         right: 0
         margin: -0.2em auto
-        background: #E44D3E
+        background: $color-orange
 
 .body2
   background-color: #ffffff
 
 #footer,#footer a, #footer h2,#header h1 a
-  color: #000000
+  color: black
 
 h2,h1.singletitle
   font: 700 50px/1.2em "Montserrat" sans-serif
@@ -67,7 +69,7 @@ form
 label
   margin-bottom: 5px !important
   text-transform: uppercase
-  color: #E44D3E
+  color: $color-orange
   font-weight: 500t
 
 textarea.form-control
@@ -84,24 +86,24 @@ textarea.form-control
 .form-control
   border-radius: 0
   border: none
-  border-left: 4px solid #E44D3E
+  border-left: 4px solid $color-orange
   box-shadow: none
   background: rgba(242,241,241, 0.92)
 
   &:focus
-    border-color: #E44D3E
+    border-color: $color-orange
     box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 0 8px rgba(233, 169, 103, 0.6)
 
 .btn-default
   border-radius: 0
   border: none
-  background: #E44D3E
+  background: $color-orange
   color: white
 
   &:hover
-    background: #C24033
+    background: $color-orange-hover
     color: white
 
   &:focus
     color: white
-    background-color: #C24033
+    background-color: $color-orange-hover
