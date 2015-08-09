@@ -27,10 +27,26 @@ class ExpositorDecorator < LittleDecorator
     Expositor::SOCIAL_NETWORKS.map do |network|
       if record.send(network).present?
         link_to "",
-                record.send(network),
+                social_link(network),
                 class: "mk-social-#{network}",
                 target: "_blank"
       end
     end.join.html_safe
+  end
+
+  private
+
+  def social_link(network)
+    nickname = record.send(network)
+    case network
+    when "facebook"
+      "http://facebook.com/#{nickname}"
+    when "twitter"
+      "http://twitter.com/#{nickname}"
+    when "skype"
+      "skype:#{nickname}?call"
+    when "instagram"
+      "http://instagram.com/#{nickname}"
+    end
   end
 end
