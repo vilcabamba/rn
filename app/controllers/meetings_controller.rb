@@ -1,2 +1,31 @@
 class MeetingsController < ApplicationController
+  expose(:expositor)
+  decorate(:expositor)
+  expose(:time) {
+    params[:time]
+  }
+  expose(:meeting) {
+    Meeting.new(
+      target: expositor,
+      time: time
+    )
+  }
+
+  def create
+    self.meeting = Meeting.new(meeting_params)
+    if meeting.save
+      redirect_to expositor_path(expositor),
+                  success: t("views.meetings.created")
+    else
+      redirect_to expositor_path(expositor),
+                  error: t("views.meetings.not_created")
+    end
+  end
+
+  private
+
+  def meeting_params
+    params.require(:meeting)
+          .permit(:target_id, :time)
+  end
 end

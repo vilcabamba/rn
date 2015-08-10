@@ -4,8 +4,7 @@ class MeetingDecorator < LittleDecorator
                 class: "point-wrapper bs-popover",
                 data: {
                   time: time,
-                  toggle: "modal",
-                  target: "#modalExpositors",
+                  toggle: "popover",
                   content: status_str,
                   trigger: "hover",
                   placement: "top",

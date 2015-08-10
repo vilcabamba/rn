@@ -1,4 +1,5 @@
 $(document).on "click", ".point-wrapper", (e) ->
   $point = $(e.currentTarget)
   id = $point.data "id"
-  $.getScript "/expositores/#{id}/meetings/new"
+  time = $point.data "time"
+  $.getScript "/expositores/#{id}/meetings/new?time=#{time}"
