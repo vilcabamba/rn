@@ -74,6 +74,10 @@
     informate:
       title: INFÓRMATE
       subtitle: ¡Tus futuros clientes y socios estratégicos esperan por ti!
+    meetings:
+      available: Disponible
+      pending: Por confirmar
+      busy: Ocupado
 
   actions:
     new: "Nuevo"

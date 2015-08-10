@@ -108,18 +108,32 @@
         display: flex
         align-items: center
         justify-content: center
-        .point
-          background: $color-green
-          width: 12px
-          height: 12px
-          border-radius: 50%
-          margin-right: 30px
-          position: relative
-          &::before
-            content: ""
-            height: 4px
-            width: 3em
-            background-color: $color-green
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
+        .point-wrapper
+          .point-time
+            display: block
+            height: 20px
+          .point
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            margin-right: 20px
+            position: relative
+            &::before
+              content: ""
+              height: 4px
+              width: 3em
+              position: absolute
+              top: 50%
+              transform: translateY(-50%)
+            &-available
+              background: $color-green
+              &::before
+                background-color: $color-green
+            &-pending
+              background: $color-yellow
+              &::before
+                background: $color-yellow
+            &-busy
+              background: $color-red
+              &::before
+                background: $color-red

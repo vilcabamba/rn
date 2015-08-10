@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806194141) do
+ActiveRecord::Schema.define(version: 20150809234522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 20150806194141) do
 
   add_index "expositores", ["category_id"], name: "index_expositores_on_category_id", using: :btree
   add_index "expositores", ["user_id"], name: "index_expositores_on_user_id", using: :btree
+
+  create_table "meetings", force: :cascade do |t|
+    t.integer  "source_id",              null: false
+    t.integer  "target_id",              null: false
+    t.string   "time",                   null: false
+    t.integer  "status",     default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "meetings", ["source_id"], name: "index_meetings_on_source_id", using: :btree
+  add_index "meetings", ["target_id"], name: "index_meetings_on_target_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

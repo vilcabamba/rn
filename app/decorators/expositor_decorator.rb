@@ -34,7 +34,26 @@ class ExpositorDecorator < LittleDecorator
     end.join.html_safe
   end
 
+  def day_meetings
+    @day_meetings ||= begin
+      Meeting::ALLOWED_TIMES.map do |hour|
+        decorate(
+          meetings_by_time.fetch(hour) {
+            Meeting.new(time: hour)
+          }
+        )
+      end
+    end
+  end
+
   private
+
+  def meetings_by_time
+    @meetings_by_time ||= record.meetings.inject({}) do |memo, meeting|
+      memo[meeting.time] = meeting
+      memo
+    end
+  end
 
   def social_link(network)
     nickname = record.send(network)
