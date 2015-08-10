@@ -61,8 +61,15 @@
         transform: translateY(-20%)
         .expositor-on-carousel
           margin: 0 0 0 2em
-          img.img-circle
+          .photo-on-carousel
             border: 2px solid $color-blue
+            width: 140px
+            height: 140px
+            background: $color-blue
+            color: white
+            font-size: 45px
+            &.without-logo
+              padding-top: 35px
           .expositor-name
             top: 0.5em
             text-transform: uppercase
