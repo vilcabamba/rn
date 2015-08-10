@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include DeviseExtendable
   include ExternalFonts
+  include Decoratable
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -13,9 +14,8 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
-  expose(:decorated_current_user) {
-    decorate current_user
-  }
+
+  decorate(:current_user)
 
   expose(:countries_for_select) {
     countries = ISO3166::Country.translations(I18n.locale)

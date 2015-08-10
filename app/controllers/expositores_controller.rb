@@ -3,6 +3,7 @@ class ExpositoresController < ApplicationController
   add_breadcrumb t("views.home.expositores"), :expositores_path
 
   expose(:expositor)
+  decorate(:expositor)
   expose(:expositores)
   expose(:tipos_personeria) {
     Expositor.tipo_personeria.keys
@@ -19,12 +20,8 @@ class ExpositoresController < ApplicationController
       Category.order(:id).page(page).per(5)
     end
   }
-  expose(:decorated_expositor) {
-    decorate expositor
-  }
 
   def index
-    add_breadcrumb t("views.home.expositores"), :expositores_path
     if params[:signed_in].present?
       flash.now[:alert] = t("devise.failure.already_authenticated")
     end
