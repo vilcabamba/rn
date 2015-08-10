@@ -14,4 +14,4 @@
               .glyphicon.glyphicon-chevron-right.arrow-right
               .expositores-container
                 - category.expositores.each do |expositor|
-                  = render "expositor", expositor: expositor
+                  = render "expositor", expositor: decorate(expositor)

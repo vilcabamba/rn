@@ -9,6 +9,21 @@ class ExpositorDecorator < LittleDecorator
     image_tag uri, class: "img-square"
   end
 
+  def photo_for_carousel
+    if record.photo?
+      image_tag record.photo_url,
+                class: "img-circle photo-on-carousel"
+    else
+      content_tag :div,
+                  initials,
+                  class: "img-circle photo-on-carousel without-logo"
+    end
+  end
+
+  def initials
+    company.split(" ").first(2).map(&:first).join
+  end
+
   def email
     link_to user.email, "mailto:#{user.email}"
   end
