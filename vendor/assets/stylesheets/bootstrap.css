@@ -5698,9 +5698,9 @@ button.close {
   background: transparent;
   border: 0;
 }
-.modal-open {
+/*.modal-open {
   overflow: hidden;
-}
+}*/
 .modal {
   position: fixed;
   top: 0;
@@ -5736,6 +5736,7 @@ button.close {
   position: relative;
   width: auto;
   margin: 10px;
+  top: 100px;
 }
 .modal-content {
   position: relative;

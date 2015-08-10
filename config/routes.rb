@@ -56,7 +56,10 @@ Rails.application.routes.draw do
       get :butaca
     end
   end
-  resources :expositores
+  resources :expositores do
+    resources :meetings
+  end
+
 
   # Example resource route within a namespace:
   namespace :admin do
