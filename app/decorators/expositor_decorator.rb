@@ -27,10 +27,45 @@ class ExpositorDecorator < LittleDecorator
     Expositor::SOCIAL_NETWORKS.map do |network|
       if record.send(network).present?
         link_to "",
-                record.send(network),
+                social_link(network),
                 class: "mk-social-#{network}",
                 target: "_blank"
       end
     end.join.html_safe
+  end
+
+  def day_meetings
+    @day_meetings ||= begin
+      Meeting::ALLOWED_TIMES.map do |hour|
+        decorate(
+          meetings_by_time.fetch(hour) {
+            Meeting.new(time: hour)
+          }
+        )
+      end
+    end
+  end
+
+  private
+
+  def meetings_by_time
+    @meetings_by_time ||= record.meetings.inject({}) do |memo, meeting|
+      memo[meeting.time] = meeting
+      memo
+    end
+  end
+
+  def social_link(network)
+    nickname = record.send(network)
+    case network
+    when "facebook"
+      "http://facebook.com/#{nickname}"
+    when "twitter"
+      "http://twitter.com/#{nickname}"
+    when "skype"
+      "skype:#{nickname}?call"
+    when "instagram"
+      "http://instagram.com/#{nickname}"
+    end
   end
 end

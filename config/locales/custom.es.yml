@@ -7,6 +7,11 @@
       not_updated: Cuenta no actualizada
       upload_photo: Sube una foto
       choose_file: Examinar
+      sn:
+        facebook: http://facebook.com/
+        twitter: http://twitter.com/
+        skype: username
+        instagram: http://instagram.com/
     current_user:
       edit_profile: Editar información
     home:
@@ -69,6 +74,10 @@
     informate:
       title: INFÓRMATE
       subtitle: ¡Tus futuros clientes y socios estratégicos esperan por ti!
+    meetings:
+      available: Disponible
+      pending: Por confirmar
+      busy: Ocupado
 
   actions:
     new: "Nuevo"

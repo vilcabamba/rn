@@ -27,6 +27,10 @@
 class Expositor < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
+  has_many :direct_meetings, class: Meeting,
+                             foreign_key: :source_id
+  has_many :inverse_meetings, class: Meeting,
+                              foreign_key: :target_id
 
   SOCIAL_NETWORKS = %w(facebook twitter skype instagram)
 
@@ -42,5 +46,12 @@ class Expositor < ActiveRecord::Base
     validates :country, presence: true
 
     validates :phone, presence: true # (?)
+  end
+
+  def meetings
+    @meetings ||= Meeting.where(
+      "source_id = :id OR target_id = :id",
+      id: id
+    )
   end
 end

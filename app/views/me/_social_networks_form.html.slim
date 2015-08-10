@@ -1,5 +1,8 @@
 - Expositor::SOCIAL_NETWORKS.each do |sn|
   .form-group
     = f.label sn.to_sym
-    = f.text_field sn.to_sym,
-                   class: "form-control"
+    .input-group
+      .input-group-addon
+        = t("views.me.sn.#{sn}")
+      = f.text_field sn.to_sym,
+                     class: "form-control"
