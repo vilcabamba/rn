@@ -1,0 +1,10 @@
+|
+  (function () {
+    "use strict";
+    var $modalWrapper = $("<div />").html("#{j render 'new_modal'}");
+    $("body").append($modalWrapper);
+    $modalWrapper.find(".modal").modal("show");
+    $modalWrapper.find(".modal").on("hidden.bs.modal", function () {
+      $modalWrapper.remove();
+    });
+  })();

@@ -6,7 +6,11 @@
   = devise_error_messages_for(resource)
 
   .container
-    p.SignUp-introduction= t("views.sign_up_form.introduction")
+    p.SignUp-introduction
+      = t("views.sign_up_form.introduction")
+    p.SignUp-introduction
+      = link_to t("views.sign_up_form.existent_account"),
+                new_user_session_path
 
   .expositorFields.container
     .form-group

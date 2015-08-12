@@ -23,6 +23,7 @@
     sign_up_form:
       limit_caracters: "Máximo 500 caracteres"
       introduction: "¡Estás a un paso de formar parte del evento de negocios más importante del año!"
+      existent_account: Ya tienes una cuenta? Inicia sesión
     submitting: "Enviando.."
     unauthorized: "No tienes permiso para realizar esta acción"
     delete: Eliminar
@@ -78,6 +79,12 @@
       available: Disponible
       pending: Por confirmar
       busy: Ocupado
+      program_meeting: Programa una reunión
+      confirm_meeting: "Deseas programar una cita para las %{time}?"
+      confirm_meeting_email: "%{company} será notificado por correo y tendrá que confirmar su disponibilidad"
+      submit: Solicitar reunión
+      created: Solicitud enviada
+      not_created: La reunión no pudo ser agendada
 
   actions:
     new: "Nuevo"
@@ -87,4 +94,5 @@
     update: "Actualizar"
     destroy: "Eliminar"
     restore: "Restaurar"
+    cancel: Cancelar
     logout: Cerrar sesión

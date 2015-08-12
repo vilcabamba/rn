@@ -1,13 +1,23 @@
 class MeetingDecorator < LittleDecorator
-  def point_wrapper
+  def point_wrapper_for(expositor)
     content_tag :div,
-                class: "point-wrapper bs-popover",
+                class: "point-wrapper meeting-#{point_class}",
                 data: {
                   time: time,
+                  id: expositor.id
+                } do
+      point_popover
+    end
+  end
+
+  def point_popover
+    content_tag :div,
+                class: "bs-popover",
+                data: {
                   toggle: "popover",
                   content: status_str,
                   trigger: "hover",
-                  placement: "top"
+                  placement: "top",
                 } do
       point.html_safe + point_time.html_safe
     end
@@ -35,7 +45,7 @@ class MeetingDecorator < LittleDecorator
   private
 
   def point_class
-    if new_record?
+    @point_class ||= if new_record?
       "available"
     elsif pending?
       "pending"

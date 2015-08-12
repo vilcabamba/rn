@@ -1,0 +1,35 @@
+.modal.fade
+  .modal-dialog
+    = form_for [expositor, meeting] do |f|
+      = f.hidden_field :target_id
+      = f.hidden_field :time
+
+      .modal-content
+        .modal-header
+          button.close aria-label="Close" data-dismiss="modal" type="button"
+            span aria-hidden="true" &times;
+          h4.modal-title
+            = t "views.meetings.program_meeting"
+
+        .modal-body
+          .row
+            .col-xs-4.text-right
+              = decorated_expositor.photo_for_carousel
+            .col-xs-8
+              h3 = decorated_expositor.company
+              p = t "views.meetings.confirm_meeting",
+                    time: time
+              p = t "views.meetings.confirm_meeting_email",
+                    company: expositor.company
+
+        .modal-footer
+          a.btn.btn-link data-dismiss="modal" type="button" href="#"
+            = t "actions.cancel"
+
+          - if current_user
+            = f.submit t("views.meetings.submit"),
+                       class: "btn btn-default"
+          - else
+            = link_to t("views.home.inscribete"),
+                      new_user_registration_path,
+                      class: "btn btn-default"
