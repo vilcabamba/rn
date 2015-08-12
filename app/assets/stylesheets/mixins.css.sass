@@ -1,0 +1,21 @@
+@import "variables"
+/*popover mixin*/
+=popover($value : $color-green)
+  .popover
+    font-size: 0.9em
+    background-color: $value
+    border: none
+    color: white
+    border-radius: 40%
+    top: 310px !important
+    .popover-content
+      padding: 25px 10px
+    .arrow
+      border-top-color: transparent
+      &::after
+        border-top-color: $value !important
+        border-top-width: 2.5em
+        bottom: -20px
+        border-left-width: 5px
+        border-right-width: 5px
+        margin-left: -5px
