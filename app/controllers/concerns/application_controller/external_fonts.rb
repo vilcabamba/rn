@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     extend ActiveSupport::Concern
 
     def external_fonts_url
-      @external_fonts_url ||= "http://fonts.googleapis.com/css?family=#{font_families}"
+      @external_fonts_url ||= "//fonts.googleapis.com/css?family=#{font_families}"
     end
 
     def font_families
