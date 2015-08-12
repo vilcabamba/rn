@@ -1,4 +1,5 @@
-$(document).on "click", ".point-wrapper", (e) ->
+selector = ".point-wrapper.meeting-available"
+$(document).on "click", selector, (e) ->
   $point = $(e.currentTarget)
   id = $point.data "id"
   time = $point.data "time"

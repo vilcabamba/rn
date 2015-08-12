@@ -84,7 +84,7 @@
       confirm_meeting_email: "%{company} será notificado por correo y tendrá que confirmar su disponibilidad"
       submit: Solicitar reunión
       created: Solicitud enviada
-      not_created: La solicitud no pudo ser enviada
+      not_created: La reunión no pudo ser agendada
 
   actions:
     new: "Nuevo"
