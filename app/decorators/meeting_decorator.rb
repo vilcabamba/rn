@@ -1,14 +1,23 @@
 class MeetingDecorator < LittleDecorator
   def point_wrapper_for(expositor)
     content_tag :div,
-                class: "point-wrapper bs-popover meeting-#{point_class}",
+                class: "point-wrapper meeting-#{point_class}",
                 data: {
                   time: time,
+                  id: expositor.id
+                } do
+      point_popover
+    end
+  end
+
+  def point_popover
+    content_tag :div,
+                class: "bs-popover",
+                data: {
                   toggle: "popover",
                   content: status_str,
                   trigger: "hover",
                   placement: "top",
-                  id: expositor.id
                 } do
       point.html_safe + point_time.html_safe
     end
