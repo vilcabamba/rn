@@ -33,7 +33,7 @@
       header: administración
       escenarios: Escenarios
     users:
-      sign_up: Regístrate
+      sign_up: Inscríbete
       sign_in_with: Iniciar sesión con %{provider}
       log_in: Iniciar sesión
       forgot_password: ¿Olvidó su contraseña?

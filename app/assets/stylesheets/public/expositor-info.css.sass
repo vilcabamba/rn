@@ -1,4 +1,5 @@
 @import "../variables"
+@import "../mixins"
 
 .current-expositors
   display: flex
@@ -111,6 +112,14 @@
         .point-wrapper
           &.meeting-available
             cursor: pointer
+            +popover($color-green)
+          &.meeting-busy
+            cursor: pointer
+            +popover($color-red)
+          &.meeting-pending
+            cursor: pointer
+            +popover($color-yellow)
+
           .point-time
             display: block
             height: 20px
