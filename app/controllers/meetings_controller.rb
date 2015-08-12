@@ -1,4 +1,6 @@
 class MeetingsController < ApplicationController
+  before_action :authenticate_user!, only: :create
+
   expose(:expositor)
   decorate(:expositor)
   expose(:time) {
@@ -13,6 +15,7 @@ class MeetingsController < ApplicationController
 
   def create
     self.meeting = Meeting.new(meeting_params)
+    self.meeting.source = current_user
     if meeting.save
       redirect_to expositor_path(expositor),
                   success: t("views.meetings.created")

@@ -1,6 +1,5 @@
 class AuthFailure < Devise::FailureApp
   def redirect_url
-    # new_reserva_path
     request.referrer
   end
 
@@ -10,7 +9,7 @@ class AuthFailure < Devise::FailureApp
       http_auth
     else
       flash[:alert] = I18n.t("devise.sessions.user.not_signed_in")
-      redirect_to root_path
+      redirect
     end
   end
 end

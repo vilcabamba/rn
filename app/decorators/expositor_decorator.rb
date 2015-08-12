@@ -21,7 +21,7 @@ class ExpositorDecorator < LittleDecorator
   end
 
   def initials
-    company.split(" ").first(2).map(&:first).join
+    company.split(" ").first(2).map(&:first).join.upcase
   end
 
   def email

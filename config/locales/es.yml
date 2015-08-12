@@ -271,6 +271,8 @@
       already_authenticated: Ya has iniciado sesión
       user:
         invalid: Usuario o contraseña incorrectos
+        not_found_in_database: Usuario o contraseña incorrectos
+        unauthenticated: Necesitas iniciar sesión
     sessions:
       user:
         not_signed_in: Necesitas iniciar sesión
