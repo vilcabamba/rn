@@ -6,10 +6,20 @@
     background-color: $value
     border: none
     color: white
+    @if ($value == $color-yellow)
+      left: -31px !important
+    @else if ($value == $color-red)
+      left: -31px !important
+    @else
+      left: -34px !important
     border-radius: 40%
-    top: -90px !important
+    top: -93px !important
     .popover-content
-      padding: 25px 10px
+      text-align: center
+      @if ($value == $color-yellow)
+        padding: 16px 10px
+      @else
+        padding: 25px 10px
     .arrow
       border-top-color: transparent
       &::after
