@@ -1,0 +1,48 @@
+img#logo src="http://feriadeloja.com/wp-content/uploads/2015/07/logo_web1.png" alt="186 Feria de Loja"
+
+.header
+  h1 Rueda de negocios
+
+h2.title Confirmación de reunión
+
+.container
+  p
+    ' Hola,
+    = @meeting.target.name
+
+  p
+    = @meeting.source.name
+    ' , de
+    = @meeting.source.company
+    '  quiere reunirse contigo a las
+    = @meeting.time
+    ' . A través de este correo puedes confirmar o reagendar una reunión
+
+  hr.hr
+
+  .row.informacion-empresarial
+    .col-xs-4
+      = image_tag @meeting.source.photo_url
+    .col-xs-8
+      h3 Información empresarial
+      p
+        ' Email:
+        = @meeting.source.user.email
+        br
+        ' Teléfono:
+        = @meeting.source.phone
+        br
+        ' Dirección:
+        = @meeting.source.address
+
+  .hr
+
+  .row.confirm-meeting-btns
+    .col-xs-6
+      = link_to "confirmar",
+                expositor_meeting_url(@meeting.target, @meeting),
+                class: "btn"
+    .col-xs-6
+      = link_to "re-agendar",
+                expositor_meeting_url(@meeting.target, @meeting),
+                class: "btn"

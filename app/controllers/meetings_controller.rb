@@ -14,8 +14,10 @@ class MeetingsController < ApplicationController
   }
 
   def create
-    self.meeting = Meeting.new(meeting_params)
-    self.meeting.source = current_user.expositor
+    meeting = MeetingScheduler.new(
+      meeting_params: meeting_params,
+      source: current_user.expositor
+    )
     if meeting.save
       redirect_to expositor_path(expositor),
                   success: t("views.meetings.created")
