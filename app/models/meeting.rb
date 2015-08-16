@@ -31,6 +31,7 @@ class Meeting < ActiveRecord::Base
     validate :time_is_unique
     validate :source_and_target_valid
     validate :time_format
+    validate :meeting_not_existent
   end
 
   belongs_to :source, class: Expositor,
@@ -39,6 +40,16 @@ class Meeting < ActiveRecord::Base
                       inverse_of: :inverse_meetings
 
   private
+
+  def meeting_not_existent
+    errors.add(
+      :target,
+      "Ya existe una reunión programada"
+    ) if self.class.exists?(
+      source_id: source_id,
+      target_id: target_id
+    )
+  end
 
   def time_format
     errors.add(

@@ -43,6 +43,9 @@ gem "countries"
 gem "kaminari"
 gem "autoprefixer-rails"
 gem "carrierwave"
+gem "premailer-rails"
+gem "nokogiri"
+gem "sucker_punch"
 
 group :development, :test do
   gem 'pry'
