@@ -75,10 +75,10 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # for carrierwave
-  config.asset_host = ENV["asset_host"]
+  config.asset_host = ENV["ASSET_HOST"]
 
   config.action_mailer.default_url_options = {
-    host: ENV["asset_host"]
+    host: ENV["ASSET_HOST"]
   }
 
   # Do not dump schema after migrations.
