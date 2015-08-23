@@ -1,0 +1,19 @@
+h2.title Reunión confirmada
+
+.container
+  p
+    ' Hola,
+    = @meeting.source.name
+
+  p
+    = @meeting.target.name
+    ' , de
+    = link_to @meeting.target.company,
+              expositor_url(@meeting.target)
+    '  ha confirmado tu solicitud para reunirse a las
+    = @meeting.time
+
+  hr.hr
+
+  = render "informacion_empresarial",
+           expositor: @meeting.target

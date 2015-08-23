@@ -1,0 +1,14 @@
+.row.informacion-empresarial
+  .col-xs-4
+    = image_tag expositor.photo_url
+  .col-xs-8
+    h3 Información empresarial
+    p
+      ' Email:
+      = expositor.user.email
+      br
+      ' Teléfono:
+      = expositor.phone
+      br
+      ' Dirección:
+      = expositor.address
