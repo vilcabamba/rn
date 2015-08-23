@@ -1,7 +1,9 @@
 - content_for :title, t("views.expositores.title")
 
-.container.current-expositors
+- if defined?(meeting) && meeting.present?
+  = 
 
+.container.current-expositors
   .expositor-logo
     .expositor-logo-image
       = decorated_expositor.photo
@@ -32,7 +34,6 @@
       h4 = decorated_expositor.country
     .expositor-info-description
       p = expositor.details
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     .expositor-info-agenda
       h4 = t("views.current_expositor.schedule_meeting")
     .expositor-info-meeting

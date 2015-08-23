@@ -27,7 +27,25 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.html { show_html }
+      format.js
+    end
+  end
+
   private
+
+  def show_html
+    # expositor's breadcrumbs
+    add_breadcrumb t("views.home.index"),
+                   :root_path
+    add_breadcrumb t("views.home.expositores"),
+                   :expositores_path
+    add_breadcrumb expositor.category.name
+    add_breadcrumb expositor.company
+    render "expositores/show"
+  end
 
   def meeting_params
     params.require(:meeting)

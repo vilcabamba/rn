@@ -4,7 +4,8 @@ class MeetingDecorator < LittleDecorator
                 class: "point-wrapper meeting-#{point_class}",
                 data: {
                   time: time,
-                  id: expositor.id
+                  expositor_id: expositor.id,
+                  id: record.id
                 } do
       point_popover
     end

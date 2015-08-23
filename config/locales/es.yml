@@ -225,6 +225,11 @@
       escenario: Escenario
       butaca: Butaca
     errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: Email no encontrado
       messages:
         <<: *errors_messages
       template:
@@ -264,6 +269,11 @@
         interest: Interés específico de participar en esta rueda de negocios
 
   devise:
+    passwords:
+      user:
+        send_instructions: Las instrucciones han sido enviadas a su cuenta de correo electrónico
+      new:
+        submit: Enviarme instrucciones para reestablecer
     registrations:
       user:
         signed_up: Registrado exitosamente

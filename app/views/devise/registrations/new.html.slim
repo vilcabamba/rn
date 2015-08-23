@@ -1,3 +1,11 @@
 - content_for :title, t("views.users.sign_up")
 
 = render "new"
+
+hr
+
+p
+  ' o
+  = link_to t("views.users.log_in"),
+          new_session_path(resource_name),
+          class: "btn btn-link"

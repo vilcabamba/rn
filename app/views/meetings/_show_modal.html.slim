@@ -1,0 +1,19 @@
+.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close data-dismiss="modal" type="button"
+          span aria-hidden="true" &times;
+        h4.modal-title
+          = t "views.meetings.meeting"
+
+      .modal-body
+        .row
+          .col-xs-4.text-right
+            = decorated_expositor.photo_for_carousel
+          .col-xs-8
+            h3 = decorated_expositor.company
+
+      .modal-footer
+        a.btn.btn-link data-dismiss="modal" type="button" href="#"
+          = t "actions.cancel"
