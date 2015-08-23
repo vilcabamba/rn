@@ -7,10 +7,18 @@ class MeetingsController < ApplicationController
     params[:time]
   }
   expose(:meeting) {
-    Meeting.new(
-      target: expositor,
-      time: time
-    )
+    if params[:id].present?
+      Meeting.find params[:id]
+    else
+      Meeting.new(
+        target: expositor,
+        time: time
+      )
+    end
+  }
+  decorate(:meeting)
+  expose(:other_target) {
+    decorated_meeting.other_side(expositor)
   }
 
   def create

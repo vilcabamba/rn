@@ -90,6 +90,10 @@
       created: Solicitud enviada
       not_created: La reunión no pudo ser agendada
       meeting: Reunión
+      scheduled_meeting: Se ha programado una reunión para las <strong>%{time}</strong> con
+      cancel: Cancelar reunión
+      confirm: Confirmar reunión
+      must_login: Debes %{link} para poder confirmar o cancelar esta reunión
 
   actions:
     new: "Nuevo"

@@ -1,7 +1,8 @@
 - content_for :title, t("views.expositores.title")
 
 - if defined?(meeting) && meeting.present?
-  = 
+  .show-meeting-modal.text-left
+    = render "meetings/show_modal"
 
 .container.current-expositors
   .expositor-logo

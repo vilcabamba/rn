@@ -57,7 +57,12 @@ Rails.application.routes.draw do
     end
   end
   resources :expositores do
-    resources :meetings
+    resources :meetings do
+      member do
+        post :cancel
+        post :confirm
+      end
+    end
   end
 
 

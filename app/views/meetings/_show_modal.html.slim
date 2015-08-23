@@ -13,7 +13,25 @@
             = decorated_expositor.photo_for_carousel
           .col-xs-8
             h3 = decorated_expositor.company
+            p
+              = decorated_meeting.details
+              =< link_to other_target.company,
+                         expositor_path(other_target)
+            = decorated_meeting.status_label
 
-      .modal-footer
-        a.btn.btn-link data-dismiss="modal" type="button" href="#"
-          = t "actions.cancel"
+            - if params[:rsvp].present? && !current_user
+              = decorated_meeting.must_login_to_rsvp
+
+      - if decorated_meeting.rsvp?(current_user)
+        .modal-footer
+          = link_to t("views.meetings.cancel"),
+                    cancel_expositor_meeting_path(expositor,
+                                                  meeting),
+                    method: :post,
+                    class: "btn btn-default"
+
+          = link_to t("views.meetings.confirm"),
+                    confirm_expositor_meeting_path(expositor,
+                                                   meeting),
+                    method: :post,
+                    class: "btn btn-primary"

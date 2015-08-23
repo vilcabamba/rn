@@ -40,9 +40,13 @@ h2.title Confirmación de reunión
   .row.confirm-meeting-btns
     .col-xs-6
       = link_to "confirmar",
-                expositor_meeting_url(@meeting.target, @meeting),
+                expositor_meeting_url(@meeting.target,
+                                      @meeting,
+                                      rsvp: true),
                 class: "btn"
     .col-xs-6
       = link_to "re-agendar",
-                expositor_meeting_url(@meeting.target, @meeting),
+                expositor_meeting_url(@meeting.target,
+                                      @meeting,
+                                      rsvp: true),
                 class: "btn"
