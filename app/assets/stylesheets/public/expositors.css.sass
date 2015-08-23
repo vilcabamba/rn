@@ -67,18 +67,30 @@
             position: relative
             color: $color-blue
 
-.photo-on-carousel
+.expositor-photo, .photo-on-carousel
   border: 2px solid $color-blue
-  width: 140px
-  height: 140px
   background-color: white
   color: white
-  font-size: 45px
   &.without-logo
-    padding-top: 35px
     margin: 0 auto
     text-align: center
     background-color: $color-blue
+
+.expositor-photo
+  font-size: 100px
+  max-width: 250px
+  max-height: 250px
+  &.without-logo
+    padding-top: 50px
+    width: 250px
+    height: 250px
+
+.photo-on-carousel
+  font-size: 45px
+  width: 140px
+  height: 140px
+  &.without-logo
+    padding-top: 35px
 
 .category-expositores-carousel
   .arrow-left, .arrow-right

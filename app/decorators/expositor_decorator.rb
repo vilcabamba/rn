@@ -5,8 +5,14 @@ class ExpositorDecorator < LittleDecorator
   end
 
   def photo
-    uri = record.photo? ? record.photo_url : "/imageplaceholder.svg"
-    image_tag uri, class: "img-square"
+    if record.photo?
+      image_tag record.photo_url,
+                class: "img-square expositor-photo"
+    else
+      content_tag :div,
+                  initials,
+                  class: "img-circle expositor-photo without-logo"
+    end
   end
 
   def photo_for_carousel
