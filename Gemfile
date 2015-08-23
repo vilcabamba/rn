@@ -47,6 +47,8 @@ gem "premailer-rails"
 gem "nokogiri"
 gem "sucker_punch"
 
+gem "airbrake"
+
 group :development, :test do
   gem 'pry'
 

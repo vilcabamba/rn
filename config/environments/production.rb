@@ -77,6 +77,10 @@ Rails.application.configure do
   # for carrierwave
   config.asset_host = ENV["asset_host"]
 
+  config.action_mailer.default_url_options = {
+    host: ENV["asset_host"]
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
