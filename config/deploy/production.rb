@@ -6,6 +6,8 @@
 # server 'manseriche.noggalito.com', user: 'macool', roles: %w{app db web}
 server 'expositores.feriadeloja.com', user: 'macool', roles: %w{app db web}
 
+set :rails_env, 'production'
+
 # role-based syntax
 # ==================
 
