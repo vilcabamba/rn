@@ -82,7 +82,7 @@
     meetings:
       available: Disponible
       pending: Por confirmar
-      busy: Ocupado
+      busy: Ocupada
       program_meeting: Programa una reunión
       confirm_meeting: "Deseas programar una cita para las %{time}?"
       confirm_meeting_email: "%{company} será notificado por correo y tendrá que confirmar su disponibilidad"
@@ -94,6 +94,8 @@
       cancel: Cancelar reunión
       confirm: Confirmar reunión
       must_login: Debes %{link} para poder confirmar o cancelar esta reunión
+      canceled: Reunión cancelada
+      confirmed: Reunión confirmada
 
   actions:
     new: "Nuevo"

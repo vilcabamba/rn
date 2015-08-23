@@ -23,7 +23,7 @@ class MeetingAvailableListener extends MeetingListener
 
 class ScheduledMeetingListener extends MeetingListener
   selector: ->
-    @wrapper + ".meeting-pending"
+    @wrapper + ".meeting-pending," + @wrapper + ".meeting-busy"
 
   onClick: (options) ->
     $.getScript "/expositores/#{options.expositorId}/meetings/#{options.id}"

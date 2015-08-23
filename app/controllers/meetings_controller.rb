@@ -22,11 +22,11 @@ class MeetingsController < ApplicationController
   }
 
   def create
-    meeting = MeetingScheduler.new(
+    scheduler = MeetingScheduler.new(
       meeting_params: meeting_params,
       source: current_user.expositor
     )
-    if meeting.save
+    if scheduler.save
       redirect_to expositor_path(expositor),
                   success: t("views.meetings.created")
     else
@@ -40,6 +40,18 @@ class MeetingsController < ApplicationController
       format.html { show_html }
       format.js
     end
+  end
+
+  def cancel
+    MeetingRsvp.new(meeting).cancel!
+    redirect_to expositor_path(expositor),
+                alert: t("views.meetings.canceled")
+  end
+
+  def confirm
+    MeetingRsvp.new(meeting).confirm!
+    redirect_to expositor_meeting_path(expositor, meeting),
+                success: t("views.meetings.confirmed")
   end
 
   private

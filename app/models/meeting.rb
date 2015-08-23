@@ -65,6 +65,11 @@ class Meeting < ActiveRecord::Base
     ) if source_id == target_id
   end
 
+  def confirm!
+    self.status = :accepted
+    save validate: false
+  end
+
   def time_is_unique
     time_invalid = %w(source target).any? do |prefix|
       self.class.where.not(id: id).exists?(
