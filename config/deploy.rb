@@ -40,14 +40,16 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push(
   'config/database.yml',
-  'config/secrets.yml'
+  '.env'
 )
 
 # Default value for default_env is {}
-set :default_env, { ASSET_HOST: "rn.feriadeloja.com" }
+# set :default_env, { }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+set :slack_webhook, "https://hooks.slack.com/services/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"
 
 namespace :deploy do
 
@@ -59,5 +61,25 @@ namespace :deploy do
       # end
     end
   end
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      execute "mkdir -p #{release_path.join('tmp')}"
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, :restart
+
+  desc 'Warm up the application by pinging it, so enduser wont have to wait'
+  task :ping do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "curl -s -D - #{fetch(:host)} -o /dev/null"
+    end
+  end
+
+  # after :restart, :ping
 
 end

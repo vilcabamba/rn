@@ -8,6 +8,8 @@ server 'expositores.feriadeloja.com', user: 'macool', roles: %w{app db web}
 
 set :rails_env, 'production'
 
+set :host, "http://rn.feriadeloja.com"
+
 # role-based syntax
 # ==================
 
