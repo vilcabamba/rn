@@ -37,9 +37,13 @@
       sign_in_with: Iniciar sesión con %{provider}
       log_in: Iniciar sesión
       forgot_password: ¿Olvidó su contraseña?
+      change_password: Cambiar contraseña
       confirmation_instructions: ¿No recibiste instrucciones para confirmar tu cuenta?
       unlock_instructions: ¿No recibiste instrucciones para desbloquear tu cuenta?
       password_length_help: "(%{minimum} caracteres mínimo)"
+      new_password: Nueva contraseña
+      confirm_new_password: Confirmar nueva contraseña
+
     escenarios:
       created: Escenario creado
       new: Nuevo escenario
@@ -78,13 +82,20 @@
     meetings:
       available: Disponible
       pending: Por confirmar
-      busy: Ocupado
+      busy: Ocupada
       program_meeting: Programa una reunión
       confirm_meeting: "Deseas programar una cita para las %{time}?"
       confirm_meeting_email: "%{company} será notificado por correo y tendrá que confirmar su disponibilidad"
       submit: Solicitar reunión
       created: Solicitud enviada
       not_created: La reunión no pudo ser agendada
+      meeting: Reunión
+      scheduled_meeting: Se ha programado una reunión para las <strong>%{time}</strong> con
+      cancel: Cancelar reunión
+      confirm: Confirmar reunión
+      must_login: Debes %{link} para poder confirmar o cancelar esta reunión
+      canceled: Reunión cancelada
+      confirmed: Reunión confirmada
 
   actions:
     new: "Nuevo"

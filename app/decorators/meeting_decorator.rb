@@ -4,7 +4,8 @@ class MeetingDecorator < LittleDecorator
                 class: "point-wrapper meeting-#{point_class}",
                 data: {
                   time: time,
-                  id: expositor.id
+                  expositor_id: expositor.id,
+                  id: record.id
                 } do
       point_popover
     end
@@ -33,6 +34,15 @@ class MeetingDecorator < LittleDecorator
     t("views.meetings.#{point_class}")
   end
 
+  def status_label
+    content = t("views.meetings.meeting")
+    content += " "
+    content += status_str.downcase
+    content_tag :div,
+                content,
+                class: "meeting-status #{point_class}"
+  end
+
   def point_time
     time_str = time.split(":").first+"h" if time =~ /:00/
     content_tag(
@@ -40,6 +50,37 @@ class MeetingDecorator < LittleDecorator
       time_str,
       class: "point-time"
     )
+  end
+
+  def other_side(user)
+    if source == user
+      target
+    else
+      source
+    end
+  end
+
+  def details
+    t(
+      "views.meetings.scheduled_meeting",
+      time: meeting.time
+    ).html_safe
+  end
+
+  def rsvp?(user)
+    user == target.user && pending?
+  end
+
+  def must_login_to_rsvp
+    link = link_to t("views.users.log_in").downcase,
+                   new_session_path(:user)
+    content_tag :div,
+                class: "alert alert-warning" do
+      t(
+        "views.meetings.must_login",
+        link: link
+      ).html_safe
+    end
   end
 
   private

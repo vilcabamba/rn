@@ -4,4 +4,10 @@ html
     = stylesheet_link_tag "premailer"
 
   body
-    .mail-content = yield
+    .mail-content
+      img#logo src="http://feriadeloja.com/wp-content/uploads/2015/07/logo_web1.png" alt="186 Feria de Loja"
+
+      .header
+        h1 Rueda de negocios
+
+      = yield

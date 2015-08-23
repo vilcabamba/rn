@@ -1,0 +1,17 @@
+h2.title Reunión cancelada
+
+.container
+  p
+    ' Hola,
+    = @meeting.source.name
+
+  p
+    = link_to @meeting.target.company,
+              expositor_url(@meeting.target)
+    '  ha rechazado la solicitud de reunión para las
+    = @meeting.time
+
+  hr.hr
+
+  = render "informacion_empresarial",
+           expositor: @meeting.target

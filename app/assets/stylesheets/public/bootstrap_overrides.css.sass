@@ -1,0 +1,35 @@
+@import "../variables"
+
+.flash-message
+  // ours
+  text-align: right
+  padding-right: 1em
+  position: absolute
+  width: 100%
+  right: 0
+  bottom: 0
+
+.alert
+  border: 0
+  color: white
+  outline: 0
+  border-radius: 0
+  display: inline-block
+  position: relative
+  padding-right: 3em
+  padding-left: 1em
+  max-width: 80%
+  &.alert-success
+    background-color: $color-green
+  &.alert-warning
+    background-color: $color-orange
+  &.alert-danger
+    background-color: $color-red
+  .alert-msg
+    margin-right: 1em
+  .close
+    color: white
+    opacity: 1
+    position: absolute
+    top: 0.6em
+    right: 0.5em
