@@ -47,11 +47,6 @@ gem "premailer-rails"
 gem "nokogiri"
 gem "sucker_punch"
 
-# deployment
-gem "capistrano-rails", "~> 1.1"
-gem "capistrano-rbenv", "~> 2.0"
-gem "slackistrano"
-
 gem "airbrake"
 
 group :development, :test do
@@ -64,6 +59,11 @@ group :development, :test do
   gem 'spring'
 
   gem "annotate"
+
+  # deployment
+  gem "capistrano-rails", "~> 1.1"
+  gem "capistrano-rbenv", "~> 2.0"
+  gem "slackistrano"
 end
 
 group :heroku do
