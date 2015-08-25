@@ -4,11 +4,11 @@
 # You can define all roles on a single server, or split them:
 
 # server 'manseriche.noggalito.com', user: 'macool', roles: %w{app db web}
-server 'expositores.feriadeloja.com', user: 'macool', roles: %w{app db web}
+server 'rdn.feriadeloja.com', user: 'macool', roles: %w{app db web}
 
 set :rails_env, 'production'
 
-set :host, "http://rn.feriadeloja.com"
+set :host, "http://rdn.feriadeloja.com"
 
 # role-based syntax
 # ==================

@@ -9,7 +9,7 @@ set :repo_url, 'git@github.com:vilcabamba/rn.git'
 set :branch, ENV["BRANCH"] || "master"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/macool/rn'
+set :deploy_to, '/home/macool/rdn'
 
 set :rbenv_type, :user
 set :rbenv_ruby, -> { File.read('.ruby-version').strip }
