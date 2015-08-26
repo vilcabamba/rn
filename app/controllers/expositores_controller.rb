@@ -17,7 +17,9 @@ class ExpositoresController < ApplicationController
   }
   expose(:category_groups) {
     (1..2).map do |page|
-      Category.order(:id).page(page).per(5)
+      Category.order(:id).page(page).per(5).map do |category|
+        decorate category
+      end
     end
   }
 

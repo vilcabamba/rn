@@ -9,5 +9,6 @@
 #
 
 class Category < ActiveRecord::Base
+  include Sluggable
   has_many :expositores
 end
