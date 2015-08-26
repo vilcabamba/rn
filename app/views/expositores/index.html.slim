@@ -5,7 +5,8 @@
     .row.categories-groups
       - categories.each do |category|
         .col-md-2.category
-          img.img-circle src="/imageplaceholder.svg"
+          = category.image_for_carousel
+
           h4 = category.name
 
           - if category.expositores.any?

@@ -4,14 +4,19 @@
   text-align: center
   font-family: Helvetica Neue, Helvetica
   .header
-    background-color: $color-blue
-    height: 200px
+    // background-color: $color-blue
+    height: 165px
     color: white
     text-transform: uppercase
     vertical-align: middle
     text-shadow: 1px 1px 0 #000
+    background-image: url(<%= asset_path "banner_email.jpg" %>)
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: contain
     h1
       padding-top: 80px
+      display: none
   .title
     color: $color-orange
 
