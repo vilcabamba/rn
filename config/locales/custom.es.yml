@@ -24,6 +24,7 @@
       limit_caracters: "Máximo 500 caracteres"
       introduction: "¡Estás a un paso de formar parte del evento de negocios más importante del año!"
       existent_account: Ya tienes una cuenta? Inicia sesión
+      social_auth: "o autentícate utilizando:"
     submitting: "Enviando.."
     unauthorized: "No tienes permiso para realizar esta acción"
     delete: Eliminar
@@ -96,6 +97,8 @@
       must_login: Debes %{link} para poder confirmar o cancelar esta reunión
       canceled: Reunión cancelada
       confirmed: Reunión confirmada
+    registrations:
+      complete_profile: Por favor completa tu información para registrarte
 
   actions:
     new: "Nuevo"

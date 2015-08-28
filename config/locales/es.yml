@@ -290,3 +290,6 @@
         signed_out: Has cerrado tu sesión
         already_signed_out: Ya cerraste sesión
         logout: Cerrar sesión
+    omniauth_callbacks:
+      user:
+        success: Has iniciado sesión

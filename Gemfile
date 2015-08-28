@@ -46,6 +46,7 @@ gem "carrierwave"
 gem "premailer-rails"
 gem "nokogiri"
 gem "sucker_punch"
+gem "omniauth-twitter"
 
 gem "airbrake"
 
