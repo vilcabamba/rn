@@ -13,6 +13,8 @@ module Users
           :email,
           :password,
           :password_confirmation,
+          :provider,
+          :uid,
           expositor_attributes: [
             :company,
             :name,

@@ -5,18 +5,31 @@
            url: registration_path(resource_name) do |f|
   = devise_error_messages_for(resource)
 
+  = f.hidden_field :provider
+  = f.hidden_field :uid
+
   .container
     p.SignUp-introduction
       = t("views.sign_up_form.introduction")
     p.SignUp-introduction
       = link_to t("views.sign_up_form.existent_account"),
                 new_user_session_path
+      =< t("views.sign_up_form.social_auth")
+
+      span.social-auth
+        - %w(twitter facebook).each do |sn|
+          = link_to "",
+                    user_omniauth_authorize_path(provider: sn.to_sym),
+                    class: "mk-social-#{sn} ttip",
+                    title: t("views.users.sign_in_with",
+                             provider: sn.titleize)
 
   .expositorFields.container
     .form-group
       = f.fields_for :expositor do |expositor|
         .expositor-fields
-          = render "expositor_form", f: expositor
+          = render "devise/registrations/expositor_form",
+                   f: expositor
 
     .form-group
       = f.label :email

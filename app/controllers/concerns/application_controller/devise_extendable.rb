@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       store_location_for(
         :user,
         request.fullpath
-      ) if request.get?
+      ) if request.get? && !request.fullpath.include?("/auth")
     end
   end
 end
