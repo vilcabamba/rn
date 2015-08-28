@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
           expositor.name = auth.info.name
           expositor.remote_photo_url = auth.info.image
           expositor.address = auth.info.location
-          expositor.web_site = auth.info.urls["Website"]
+          expositor.web_site = auth.info.urls["Website"] if auth.info.urls.present?
 
           if user.valid? && expositor.valid?
             user.save && expositor.save

@@ -39,6 +39,7 @@ class Expositor < ActiveRecord::Base
   mount_uploader :photo, ExpositorPhotoUploader
 
   begin :validations
+    validates :company, presence: true
     validates :tipo_personeria, presence: true
     validates :name, presence: true
 

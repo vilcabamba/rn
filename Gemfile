@@ -47,6 +47,7 @@ gem "premailer-rails"
 gem "nokogiri"
 gem "sucker_punch"
 gem "omniauth-twitter"
+gem "omniauth-facebook"
 
 gem "airbrake"
 

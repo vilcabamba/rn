@@ -11,4 +11,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       render "devise/registrations/new"
     end
   end
+  
+  alias_method :facebook, :twitter
+
 end

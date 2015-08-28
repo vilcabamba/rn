@@ -17,10 +17,12 @@
       =< t("views.sign_up_form.social_auth")
 
       span.social-auth
-        - %w(twitter).each do |sn|
+        - %w(twitter facebook).each do |sn|
           = link_to "",
                     user_omniauth_authorize_path(provider: sn.to_sym),
-                    class: "mk-social-twitter"
+                    class: "mk-social-#{sn} ttip",
+                    title: t("views.users.sign_in_with",
+                             provider: sn.titleize)
 
   .expositorFields.container
     .form-group

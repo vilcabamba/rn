@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:twitter]
+         :omniauthable, :omniauth_providers => [:twitter, :facebook]
 
   delegate :name, to: :expositor
 

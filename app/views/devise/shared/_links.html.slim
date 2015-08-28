@@ -26,8 +26,12 @@
             class: classes
 
 - if devise_mapping.omniauthable?
-  - resource_class.omniauth_providers.each do |provider|
-    = link_to t("views.users.sign_in_with",
-                provider: provider.to_s.titleize),
-              omniauth_authorize_path(resource_name, provider),
-              class: classes
+  .social-auth
+    h3
+      =< t("views.sign_up_form.social_auth")
+      - resource_class.omniauth_providers.each do |provider|
+        = link_to "",
+                  omniauth_authorize_path(resource_name, provider),
+                  class: "mk-social-#{provider} ttip",
+                  title: t("views.users.sign_in_with",
+                           provider: provider.to_s.titleize)
