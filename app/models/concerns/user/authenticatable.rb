@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
           expositor = user.expositor || user.build_expositor
           expositor.name = auth.info.name
-          expositor.remote_photo_url = auth.info.image
+          expositor.remote_photo_url = auth.info.image unless expositor.photo?
           expositor.address = auth.info.location
           expositor.web_site = auth.info.urls["Website"] if auth.info.urls.present?
 
