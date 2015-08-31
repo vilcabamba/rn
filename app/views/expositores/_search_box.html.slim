@@ -1,0 +1,12 @@
+= form_tag expositores_path,
+           method: :get do
+  = text_field_tag :q,
+                   params[:q],
+                   class: "form-control",
+                   required: true,
+                   placeholder: t("actions.search")
+
+  a.submit-search-btn href="#"
+    i.glyphicon.glyphicon-search
+  .hidden
+    = submit_tag t("actions.search")

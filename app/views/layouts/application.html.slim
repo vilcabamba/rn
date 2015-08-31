@@ -19,6 +19,9 @@ html lang="es"
           ol.breadcrumb
             = render_breadcrumbs tag: :li, separator: ""
 
+          .search-box
+            = render "expositores/search_box"
+
       = yield
 
     = render "layouts/footer"

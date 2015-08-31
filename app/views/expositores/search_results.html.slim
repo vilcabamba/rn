@@ -1,0 +1,5 @@
+- content_for :title, t("views.expositores.title")
+
+.container
+  - expositores.each do |expositor|
+    = render "expositor", expositor: decorate(expositor)
