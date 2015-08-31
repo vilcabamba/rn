@@ -4,7 +4,11 @@ class ExpositoresController < ApplicationController
 
   expose(:expositor)
   decorate(:expositor)
-  expose(:expositores)
+  expose(:expositores) {
+    ExpositorSearch.new(
+      q: params[:q]
+    ).results
+  }
   expose(:tipos_personeria) {
     Expositor.tipo_personeria.keys
   }
@@ -26,6 +30,9 @@ class ExpositoresController < ApplicationController
   def index
     if params[:signed_in].present?
       flash.now[:alert] = t("devise.failure.already_authenticated")
+    end
+    if params[:q].present?
+      render :search_results
     end
   end
 
