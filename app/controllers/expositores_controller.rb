@@ -2,7 +2,9 @@ class ExpositoresController < ApplicationController
   add_breadcrumb t("views.home.index"), :root_path
   add_breadcrumb t("views.home.expositores"), :expositores_path
 
-  expose(:expositor)
+  expose(:expositor) {
+    Expositor.friendly.find params[:id]
+  }
   decorate(:expositor)
   expose(:expositores) {
     ExpositorSearch.new(

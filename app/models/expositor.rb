@@ -25,6 +25,10 @@
 #
 
 class Expositor < ActiveRecord::Base
+  extend FriendlyId
+
+  friendly_id :company, use: :slugged
+
   belongs_to :user
   belongs_to :category
   has_many :direct_meetings, class: Meeting,
