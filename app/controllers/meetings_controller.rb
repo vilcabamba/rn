@@ -1,7 +1,9 @@
 class MeetingsController < ApplicationController
   before_action :authenticate_user!, only: :create
 
-  expose(:expositor)
+  expose(:expositor) {
+    Expositor.friendly.find params[:expositor_id]
+  }
   decorate(:expositor)
   expose(:time) {
     params[:time]
