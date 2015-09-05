@@ -50,6 +50,7 @@ gem "omniauth-twitter"
 gem "omniauth-facebook"
 gem "searchlight"
 gem "friendly_id"
+gem "mini_magick"
 
 gem "airbrake"
 
