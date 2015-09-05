@@ -11,6 +11,6 @@ $(document).on("ready", function() {
   s.parentNode.insertBefore(t, s);
 });
 
-$(document).on("page:load", function () {
+$(document).on("page:change", function () {
   _gauges.push(['track']);
 });
