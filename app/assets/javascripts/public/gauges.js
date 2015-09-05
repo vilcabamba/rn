@@ -1,5 +1,5 @@
 var _gauges = _gauges || [];
-(function() {
+$(document).on("ready", function() {
   var t   = document.createElement('script');
   t.type  = 'text/javascript';
   t.async = true;
@@ -9,8 +9,8 @@ var _gauges = _gauges || [];
   t.src = 'https://track.gaug.es/track.js';
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(t, s);
-})();
+});
 
-$(document).on("ready page:load", function () {
+$(document).on("page:load", function () {
   _gauges.push(['track']);
 });
