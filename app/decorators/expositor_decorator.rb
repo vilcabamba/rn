@@ -6,7 +6,7 @@ class ExpositorDecorator < LittleDecorator
 
   def photo
     if record.photo?
-      image_tag record.photo_url,
+      image_tag record.photo_url(:normal),
                 class: "img-square expositor-photo"
     else
       content_tag :div,
@@ -17,7 +17,7 @@ class ExpositorDecorator < LittleDecorator
 
   def photo_for_carousel
     if record.photo?
-      image_tag record.photo_url,
+      image_tag record.photo_url(:thumb),
                 class: "img-circle photo-on-carousel"
     else
       content_tag :div,
