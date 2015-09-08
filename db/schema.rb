@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902165819) do
+ActiveRecord::Schema.define(version: 20150908001805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 20150902165819) do
   create_table "expositores", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "tipo_personeria", default: 0
-    t.string   "country"
+    t.string   "country",         default: "EC"
     t.string   "phone"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "address"
     t.string   "company"
     t.string   "web_site"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20150902165819) do
     t.text     "details"
     t.text     "interest"
     t.string   "alcance"
-    t.string   "name",                        null: false
-    t.integer  "category_id",                 null: false
+    t.string   "name",                           null: false
+    t.integer  "category_id",                    null: false
     t.string   "facebook"
     t.string   "twitter"
     t.string   "skype"
