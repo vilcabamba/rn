@@ -51,7 +51,7 @@ gem "omniauth-facebook"
 gem "searchlight"
 gem "friendly_id"
 gem "mini_magick"
-
+gem "newrelic_rpm"
 gem "airbrake"
 
 group :development, :test do
