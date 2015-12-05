@@ -6,6 +6,9 @@ class MeetingScheduler
     @meeting_params = options.fetch(:meeting_params)
   end
 
+  ##
+  # @return [Boolean] whether the meeting
+  # is saved or not
   def save
     meeting.save.tap do |saved|
       if saved
