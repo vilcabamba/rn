@@ -49,7 +49,7 @@ set :linked_files, fetch(:linked_files, []).push(
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :slack_webhook, "https://hooks.slack.com/services/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"
+set :slack_webhook, "https://hooks.slack.com/services/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"
 
 namespace :deploy do
 
